@@ -1,4 +1,4 @@
-import type { Option, Question } from "../data/questions";
+import { getTemaGeral, type Option, type Question } from "../data/questions";
 
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL?.replace(/\/$/, "");
 const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY;
@@ -14,6 +14,7 @@ type QuestionEventPayload = {
   question_id: string;
   area: Question["area"];
   tema: Question["Tema"];
+  tema_geral: string;
   selected_option_id: Option["id"] | null;
   correct_option_id: Option["id"];
   is_correct: boolean;
@@ -89,6 +90,7 @@ function toPayload(event: QuestionAnalyticsEvent): QuestionEventPayload {
     question_id: event.question.id,
     area: event.question.area,
     tema: event.question.Tema,
+    tema_geral: getTemaGeral(event.question),
     selected_option_id: event.selectedOptionId,
     correct_option_id: event.question.correctOptionId,
     is_correct: event.isCorrect,
@@ -149,4 +151,3 @@ export function trackQuestionEvent(event: QuestionAnalyticsEvent) {
   writeQueue(queue);
   void flushQuestionEventQueue();
 }
-

@@ -38,6 +38,7 @@ function getQuestionSearchText(question: Question) {
   return [
     question.id,
     question.area,
+    question.temaGeral,
     question.Tema,
     question.statement,
     question.hint,
@@ -423,7 +424,8 @@ export default function QuestionEditorDashboard() {
                       <thead>
                         <tr>
                           <th>ID</th>
-                          <th>Tema</th>
+                          <th>Tema geral</th>
+                          <th>Tema especifico</th>
                           <th>Area</th>
                         </tr>
                       </thead>
@@ -435,6 +437,7 @@ export default function QuestionEditorDashboard() {
                             onClick={() => selectQuestion(question)}
                           >
                             <td>{question.id}</td>
+                            <td>{question.temaGeral ?? question.Tema}</td>
                             <td>{question.Tema}</td>
                             <td>{question.area}</td>
                           </tr>
@@ -459,10 +462,19 @@ export default function QuestionEditorDashboard() {
                   </div>
 
                   <div className="question-detail-meta">
+                    <span>{draft.temaGeral ?? draft.Tema}</span>
                     <span>{draft.Tema}</span>
                     <span>{draft.area}</span>
                     <span>{draft.explanationTitle}</span>
                   </div>
+
+                  <label className="editor-field">
+                    <span>Tema geral</span>
+                    <input
+                      onChange={(event) => updateDraft((current) => ({ ...current, temaGeral: event.target.value }))}
+                      value={draft.temaGeral ?? draft.Tema}
+                    />
+                  </label>
 
                   {saveState === "saved" && (
                     <p className="editor-form-success">

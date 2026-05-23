@@ -1,14 +1,17 @@
-import type { Area, Tema } from "../data/questions";
+import { getTemaGeral, questionBank, type Area, type Tema, type TemaGeral } from "../data/questions";
 
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL?.replace(/\/$/, "");
 const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY;
 const STATS_ENDPOINT = SUPABASE_URL ? `${SUPABASE_URL}/rest/v1/daily_question_stats` : "";
 const QUESTION_STATS_ENDPOINT = SUPABASE_URL ? `${SUPABASE_URL}/rest/v1/question_stats` : "";
+const temaGeralByQuestionId = new Map(questionBank.map((question) => [question.id, getTemaGeral(question)]));
+const temaGeralByTema = new Map(questionBank.map((question) => [question.Tema, getTemaGeral(question)]));
 
 export type AggregatedQuestionStats = {
   localDay: string;
   area: Area;
   tema: Tema;
+  temaGeral: TemaGeral;
   totalQuestions: number;
   correctQuestions: number;
   incorrectQuestions: number;
@@ -22,6 +25,7 @@ export type AggregatedQuestionDetailStats = {
   questionId: string;
   area: Area;
   tema: Tema;
+  temaGeral: TemaGeral;
   correctOptionId: "A" | "B" | "C" | "D";
   totalQuestions: number;
   correctQuestions: number;
@@ -40,6 +44,7 @@ type StatsRow = {
   local_day: string;
   area: Area;
   tema: Tema;
+  tema_geral?: TemaGeral | null;
   total_questions: number;
   correct_questions: number;
   incorrect_questions: number;
@@ -53,6 +58,7 @@ type QuestionStatsRow = {
   question_id: string;
   area: Area;
   tema: Tema;
+  tema_geral?: TemaGeral | null;
   correct_option_id: "A" | "B" | "C" | "D";
   total_questions: number;
   correct_questions: number;
@@ -79,11 +85,16 @@ function toNumber(value: number | string | null) {
   return typeof value === "number" ? value : Number(value);
 }
 
+function resolveTemaGeral(row: Pick<StatsRow, "tema" | "tema_geral"> & { question_id?: string }) {
+  return (row.question_id ? temaGeralByQuestionId.get(row.question_id) : undefined) || temaGeralByTema.get(row.tema) || row.tema_geral?.trim() || row.tema;
+}
+
 function normalizeRow(row: StatsRow): AggregatedQuestionStats {
   return {
     localDay: row.local_day,
     area: row.area,
     tema: row.tema,
+    temaGeral: resolveTemaGeral(row),
     totalQuestions: row.total_questions,
     correctQuestions: row.correct_questions,
     incorrectQuestions: row.incorrect_questions,
@@ -99,6 +110,7 @@ function normalizeQuestionRow(row: QuestionStatsRow): AggregatedQuestionDetailSt
     questionId: row.question_id,
     area: row.area,
     tema: row.tema,
+    temaGeral: resolveTemaGeral(row),
     correctOptionId: row.correct_option_id,
     totalQuestions: row.total_questions,
     correctQuestions: row.correct_questions,
@@ -114,18 +126,13 @@ function normalizeQuestionRow(row: QuestionStatsRow): AggregatedQuestionDetailSt
   };
 }
 
-export async function fetchAggregatedQuestionStats() {
-  if (!questionStatsConfigured()) {
-    return [];
-  }
-
+async function fetchStatsRows<Row>(endpoint: string, select: string) {
   const params = new URLSearchParams({
-    select:
-      "local_day,area,tema,total_questions,correct_questions,incorrect_questions,expired_questions,correct_percent,average_score",
+    select,
     order: "local_day.desc",
   });
 
-  const response = await window.fetch(`${STATS_ENDPOINT}?${params.toString()}`, {
+  const response = await window.fetch(`${endpoint}?${params.toString()}`, {
     headers: {
       apikey: SUPABASE_ANON_KEY,
       Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
@@ -136,7 +143,25 @@ export async function fetchAggregatedQuestionStats() {
     throw new Error(`Supabase stats request failed with status ${response.status}`);
   }
 
-  const rows = (await response.json()) as StatsRow[];
+  return (await response.json()) as Row[];
+}
+
+export async function fetchAggregatedQuestionStats() {
+  if (!questionStatsConfigured()) {
+    return [];
+  }
+
+  const selectWithTemaGeral =
+    "local_day,area,tema,tema_geral,total_questions,correct_questions,incorrect_questions,expired_questions,correct_percent,average_score";
+  const legacySelect =
+    "local_day,area,tema,total_questions,correct_questions,incorrect_questions,expired_questions,correct_percent,average_score";
+  let rows: StatsRow[];
+
+  try {
+    rows = await fetchStatsRows<StatsRow>(STATS_ENDPOINT, selectWithTemaGeral);
+  } catch {
+    rows = await fetchStatsRows<StatsRow>(STATS_ENDPOINT, legacySelect);
+  }
 
   return rows.map(normalizeRow);
 }
@@ -146,24 +171,17 @@ export async function fetchAggregatedQuestionDetailStats() {
     return [];
   }
 
-  const params = new URLSearchParams({
-    select:
-      "local_day,question_id,area,tema,correct_option_id,total_questions,correct_questions,incorrect_questions,expired_questions,used_hint_questions,selected_a_questions,selected_b_questions,selected_c_questions,selected_d_questions,correct_percent,average_score",
-    order: "local_day.desc",
-  });
+  const selectWithTemaGeral =
+    "local_day,question_id,area,tema,tema_geral,correct_option_id,total_questions,correct_questions,incorrect_questions,expired_questions,used_hint_questions,selected_a_questions,selected_b_questions,selected_c_questions,selected_d_questions,correct_percent,average_score";
+  const legacySelect =
+    "local_day,question_id,area,tema,correct_option_id,total_questions,correct_questions,incorrect_questions,expired_questions,used_hint_questions,selected_a_questions,selected_b_questions,selected_c_questions,selected_d_questions,correct_percent,average_score";
+  let rows: QuestionStatsRow[];
 
-  const response = await window.fetch(`${QUESTION_STATS_ENDPOINT}?${params.toString()}`, {
-    headers: {
-      apikey: SUPABASE_ANON_KEY,
-      Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
-    },
-  });
-
-  if (!response.ok) {
-    throw new Error(`Supabase question stats request failed with status ${response.status}`);
+  try {
+    rows = await fetchStatsRows<QuestionStatsRow>(QUESTION_STATS_ENDPOINT, selectWithTemaGeral);
+  } catch {
+    rows = await fetchStatsRows<QuestionStatsRow>(QUESTION_STATS_ENDPOINT, legacySelect);
   }
-
-  const rows = (await response.json()) as QuestionStatsRow[];
 
   return rows.map(normalizeQuestionRow);
 }

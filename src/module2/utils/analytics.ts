@@ -1,4 +1,4 @@
-import type { Option, Question } from "../data/questions";
+import { getTemaGeral, type Option, type Question } from "../data/questions";
 
 const MODULE2_QUEUE_STORAGE_KEY = "questmed2:question-event-queue";
 const MODULE2_SESSION_STORAGE_KEY = "questmed2:anonymous-session-id";
@@ -12,6 +12,7 @@ type QuestionEventPayload = {
   question_id: string;
   area: Question["area"];
   tema: Question["Tema"];
+  tema_geral: string;
   selected_option_id: Option["id"] | null;
   correct_option_id: Option["id"];
   is_correct: boolean;
@@ -84,6 +85,7 @@ function toPayload(event: QuestionAnalyticsEvent): QuestionEventPayload {
     question_id: event.question.id,
     area: event.question.area,
     tema: event.question.Tema,
+    tema_geral: getTemaGeral(event.question),
     selected_option_id: event.selectedOptionId,
     correct_option_id: event.question.correctOptionId,
     is_correct: event.isCorrect,

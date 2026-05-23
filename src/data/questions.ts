@@ -2,6 +2,7 @@ import questionBankData from "./question-bank.json";
 
 export type Area = string;
 export type Tema = string;
+export type TemaGeral = string;
 
 export type Option = {
   id: "A" | "B" | "C" | "D";
@@ -12,6 +13,7 @@ export type Question = {
   id: string;
   area: Area;
   Tema: Tema;
+  temaGeral?: TemaGeral;
   statement: string;
   attachments?: QuestionAttachment[];
   options: Option[];
@@ -46,9 +48,9 @@ function shuffleQuestions<T>(questions: T[]) {
 }
 
 function pickBalancedDailyQuestions(questions: Question[]) {
-  const themes = Array.from(new Set(questions.map((question) => question.Tema)));
-  const buckets = new Map<Tema, Question[]>(
-    themes.map((theme) => [theme, shuffleQuestions(questions.filter((question) => question.Tema === theme))]),
+  const themes = Array.from(new Set(questions.map(getTemaGeral)));
+  const buckets = new Map<TemaGeral, Question[]>(
+    themes.map((theme) => [theme, shuffleQuestions(questions.filter((question) => getTemaGeral(question) === theme))]),
   );
   const themeOrder = shuffleQuestions(themes);
   const selected: Question[] = [];
@@ -75,3 +77,7 @@ function pickBalancedDailyQuestions(questions: Question[]) {
 
 export const questionBank = questionBankData as unknown as Question[];
 export const dailyQuestions: Question[] = pickBalancedDailyQuestions(questionBank);
+
+export function getTemaGeral(question: Pick<Question, "Tema" | "temaGeral">) {
+  return question.temaGeral?.trim() || question.Tema;
+}

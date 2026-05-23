@@ -17,7 +17,8 @@ import {
   Sparkles,
   X,
 } from "lucide-react";
-import { questionBank, type Option, type Question } from "./data/questions";
+import { getTemaGeral, questionBank, type Option, type Question } from "./data/questions";
+import FormattedExplanation from "../FormattedExplanation";
 import QuestionEditorDashboard from "../QuestionEditorDashboard";
 import QuestionAttachments from "../QuestionAttachments";
 import OfficialQuestionValidatorDashboard from "../OfficialQuestionValidatorDashboard";
@@ -247,12 +248,12 @@ function getQuestionSelectionScore(question: Question, recentQuestionIds: string
 
 function createQuestionSet() {
   const recentQuestionIds = readRecentQuestionExposures();
-  const themes = Array.from(new Set(questionBank.map((question) => question.Tema)));
+  const themes = Array.from(new Set(questionBank.map(getTemaGeral)));
   const buckets = new Map(
     themes.map((theme) => [
       theme,
       questionBank
-        .filter((question) => question.Tema === theme)
+        .filter((question) => getTemaGeral(question) === theme)
         .map((question) => ({
           question,
           score: getQuestionSelectionScore(question, recentQuestionIds),
@@ -803,9 +804,7 @@ function ClassroomModule() {
 
                   {selectedQuestion.explanation && (
                     <div className="explanation-card">
-                      <p>
-                        <strong>Justificativa:</strong> {selectedQuestion.explanation}
-                      </p>
+                      <FormattedExplanation explanation={selectedQuestion.explanation} />
                     </div>
                   )}
 
@@ -1980,9 +1979,7 @@ function QuizApp() {
 
             {(targetState.isConfirmed || targetState.isExpired) && targetQuestion.explanation && (
               <div className="explanation-card">
-                <p>
-                  <strong>Justificativa:</strong> {targetQuestion.explanation}
-                </p>
+                <FormattedExplanation explanation={targetQuestion.explanation} />
               </div>
             )}
           </section>

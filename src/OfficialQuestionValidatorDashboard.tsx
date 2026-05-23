@@ -55,6 +55,7 @@ function getQuestionSearchText(question: ImportedQuestion) {
     question.id,
     question.source,
     question.area,
+    question.temaGeral,
     question.Tema,
     question.statement,
     question.hint,
@@ -542,6 +543,13 @@ export default function OfficialQuestionValidatorDashboard() {
                     <label className="editor-field">
                       <span>Tema</span>
                       <input onChange={(event) => updateDraft((current) => ({ ...current, Tema: event.target.value }))} value={draft.Tema} />
+                    </label>
+                    <label className="editor-field">
+                      <span>Tema geral</span>
+                      <input
+                        onChange={(event) => updateDraft((current) => ({ ...current, temaGeral: event.target.value }))}
+                        value={draft.temaGeral ?? draft.Tema}
+                      />
                     </label>
                   </div>
 

@@ -18,6 +18,7 @@ export type StatsPdfQuestionSummary = StatsPdfSummary & {
   questionId: string;
   area: string;
   tema: string;
+  temaGeral: string;
   correctOptionId: Option["id"];
   usedHintQuestions: number;
   selectedOptions: Record<Option["id"], number>;
@@ -307,7 +308,7 @@ function addQuestionSection(pdf: SimplePdf, questions: StatsPdfQuestionSummary[]
     pdf.ensureSpace(58);
     pdf.addText(`${index + 1}. ${question.questionId}`, { bold: true, size: 9.4 });
     pdf.addText(
-      `${question.tema} | ${question.area} | Gabarito ${question.correctOptionId} | ${question.totalQuestions} respostas | ${formatDecimal(question.correctPercent)}% acerto`,
+      `${question.temaGeral} | ${question.tema} | ${question.area} | Gabarito ${question.correctOptionId} | ${question.totalQuestions} respostas | ${formatDecimal(question.correctPercent)}% acerto`,
       { size: 8.7 },
     );
     pdf.addText(
@@ -423,7 +424,7 @@ function addTopQuestionRanking(pdf: SimplePdf, title: string, questions: StatsPd
   questions.slice(0, 15).forEach((question, index) => {
     pdf.ensureSpace(21);
     pdf.addText(
-      `${String(index + 1).padStart(2, "0")}. ${truncate(question.questionId, 48)} | ${question.tema} | ${formatDecimal(question.correctPercent)}% | n=${question.totalQuestions}`,
+      `${String(index + 1).padStart(2, "0")}. ${truncate(question.questionId, 48)} | ${question.temaGeral} | ${formatDecimal(question.correctPercent)}% | n=${question.totalQuestions}`,
       { size: 8.4 },
     );
   });
@@ -433,12 +434,12 @@ function addTopQuestionRanking(pdf: SimplePdf, title: string, questions: StatsPd
 
 function addThemeCompactTables(pdf: SimplePdf, questions: StatsPdfQuestionSummary[]) {
   const entries: Array<{ kind: "header" | "row"; question?: StatsPdfQuestionSummary; title?: string }> = [];
-  const themeOrder = Array.from(new Set(questions.map((question) => question.tema))).sort();
+  const themeOrder = Array.from(new Set(questions.map((question) => question.temaGeral))).sort();
 
   themeOrder.forEach((theme) => {
     entries.push({ kind: "header", title: theme });
     questions
-      .filter((question) => question.tema === theme)
+      .filter((question) => question.temaGeral === theme)
       .sort((a, b) => a.correctPercent - b.correctPercent)
       .forEach((question) => entries.push({ kind: "row", question }));
   });

@@ -31,7 +31,8 @@
       "D": 70
     },
     "explanationTitle": "Pielonefrite",
-    "explanation": "Pielonefrite obstrutiva por cálculo ureteral exige drenagem urinária urgente (duplo J ou nefrostomia) + ATB, independentemente do tamanho do cálculo."
+    "explanation": "Pielonefrite obstrutiva por cálculo ureteral exige drenagem urinária urgente (duplo J ou nefrostomia) + ATB, independentemente do tamanho do cálculo.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest17.UFS.2020",
@@ -65,7 +66,8 @@
       "D": 10
     },
     "explanationTitle": "Cistite",
-    "explanation": "Quadro clássico de cistite não complicada em mulher jovem: disúria, polaciúria, dor suprapúbica relacionada à micção → tratamento empírico ambulatorial com ATB de espectro para Gram-negativos."
+    "explanation": "Quadro clássico de cistite não complicada em mulher jovem: disúria, polaciúria, dor suprapúbica relacionada à micção → tratamento empírico ambulatorial com ATB de espectro para Gram-negativos.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest18.PSU-MG.2020",
@@ -99,7 +101,8 @@
       "D": 10
     },
     "explanationTitle": "Pielonefrite",
-    "explanation": "Quadro inicial de pielonefrite aguda por E. coli tratado com ciprofloxacino; recidiva + eosinofilia + rash = reação de hipersensibilidade → trocar ATB + corticoterapia."
+    "explanation": "Quadro inicial de pielonefrite aguda por E. coli tratado com ciprofloxacino; recidiva + eosinofilia + rash = reação de hipersensibilidade → trocar ATB + corticoterapia.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest19.USP-RP.2025",
@@ -133,7 +136,8 @@
       "D": 70
     },
     "explanationTitle": "Cistite",
-    "explanation": "Cistite recorrente pós-coito em mulher na menacme sem prolapso ou incontinência → profilaxia antibiótica pós-relação (nitrofurantoína ou TMP-SMX dose única) é conduta de escolha."
+    "explanation": "Cistite recorrente pós-coito em mulher na menacme sem prolapso ou incontinência → profilaxia antibiótica pós-relação (nitrofurantoína ou TMP-SMX dose única) é conduta de escolha.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest20.HOS-SP.2021",
@@ -167,7 +171,8 @@
       "D": 10
     },
     "explanationTitle": "Pielonefrite",
-    "explanation": "Pielonefrite aguda em gestante → ceftriaxona (segura na gravidez) é primeira linha."
+    "explanation": "Pielonefrite aguda em gestante → ceftriaxona (segura na gravidez) é primeira linha.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest21.SCM-SP.2025",
@@ -201,7 +206,8 @@
       "D": 10
     },
     "explanationTitle": "Cistite",
-    "explanation": "Bacteriúria assintomática em gestante (E. coli >10⁵) deve ser tratada com ATB seguro (amox-clav) para prevenir cistite/pielonefrite."
+    "explanation": "Bacteriúria assintomática em gestante (E. coli >10⁵) deve ser tratada com ATB seguro (amox-clav) para prevenir cistite/pielonefrite.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest22.SCOML-SP.2022",
@@ -235,7 +241,8 @@
       "D": 10
     },
     "explanationTitle": "Pielonefrite",
-    "explanation": "Febre + dor abdominal + disúria + leucocitúria + nitrito positivo em criança = pielonefrite aguda."
+    "explanation": "Febre + dor abdominal + disúria + leucocitúria + nitrito positivo em criança = pielonefrite aguda.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest01.UnP.2026",
@@ -269,7 +276,8 @@
       "D": 10
     },
     "explanationTitle": "Cistite aguda",
-    "explanation": "Diretrizes recomendam fosfomicina em dose única como primeira escolha para cistite aguda não complicada em mulheres por sua eficácia, segurança e baixo impacto na resistência."
+    "explanation": "Diretrizes recomendam fosfomicina em dose única como primeira escolha para cistite aguda não complicada em mulheres por sua eficácia, segurança e baixo impacto na resistência.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest02.UnP.2026",
@@ -303,7 +311,8 @@
       "D": 10
     },
     "explanationTitle": "Pielonefrite",
-    "explanation": "Presença de febre e dor lombar indica infecção do trato urinário superior (pielonefrite), que requer tratamento mais prolongado e possivelmente intravenoso em casos graves."
+    "explanation": "Presença de febre e dor lombar indica infecção do trato urinário superior (pielonefrite), que requer tratamento mais prolongado e possivelmente intravenoso em casos graves.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest03.UnP.2026",
@@ -337,7 +346,8 @@
       "D": 10
     },
     "explanationTitle": "Cálculo urinário",
-    "explanation": "Cálculos ureterais <6-7 mm têm alta chance de eliminação espontânea com manejo conservador (analgesia e hidratação)."
+    "explanation": "Cálculos ureterais <6-7 mm têm alta chance de eliminação espontânea com manejo conservador (analgesia e hidratação).",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest04.UnP.2026",
@@ -371,7 +381,8 @@
       "D": 10
     },
     "explanationTitle": "Uretrite",
-    "explanation": "Devido à resistência, tratamento dual para gonorreia (ceftriaxona) e cobertura para clamídia (azitromicina)."
+    "explanation": "Devido à resistência, tratamento dual para gonorreia (ceftriaxona) e cobertura para clamídia (azitromicina).",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest05.UnP.2026",
@@ -405,7 +416,8 @@
       "D": 10
     },
     "explanationTitle": "Cervicite",
-    "explanation": "Cervicite mucopurulenta é classicamente associada a clamídia e gonococo."
+    "explanation": "Cervicite mucopurulenta é classicamente associada a clamídia e gonococo.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest06.UnP.2026",
@@ -439,7 +451,8 @@
       "D": 10
     },
     "explanationTitle": "Cistite aguda",
-    "explanation": "Amoxicilina-clavulanato é opção comum para ITU em pediatria, evitando quinolonas em crianças devido a riscos articulares."
+    "explanation": "Amoxicilina-clavulanato é opção comum para ITU em pediatria, evitando quinolonas em crianças devido a riscos articulares.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest07.UnP.2026",
@@ -473,7 +486,8 @@
       "D": 10
     },
     "explanationTitle": "Cistite crônica",
-    "explanation": "Profilaxia pós-coito é tão eficaz quanto contínua e reduz o uso de antibióticos em ITUs pós-coito."
+    "explanation": "Profilaxia pós-coito é tão eficaz quanto contínua e reduz o uso de antibióticos em ITUs pós-coito.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest08.UnP.2026",
@@ -507,7 +521,8 @@
       "D": 10
     },
     "explanationTitle": "Pielonefrite",
-    "explanation": "A urocultura é essencial para guiar a terapia dirigida e confirmar o diagnóstico em ITUs altas ou complicadas."
+    "explanation": "A urocultura é essencial para guiar a terapia dirigida e confirmar o diagnóstico em ITUs altas ou complicadas.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest09.UnP.2026",
@@ -541,7 +556,8 @@
       "D": 10
     },
     "explanationTitle": "Cálculo renal",
-    "explanation": "Cálculos >10 mm geralmente requerem tratamento ativo por menor chance de eliminação espontânea e risco de complicações."
+    "explanation": "Cálculos >10 mm geralmente requerem tratamento ativo por menor chance de eliminação espontânea e risco de complicações.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest10.UnP.2026",
@@ -575,7 +591,8 @@
       "D": 10
     },
     "explanationTitle": "Cistite aguda",
-    "explanation": "Em gestantes, bacteriúria assintomática deve ser tratada para prevenir pielonefrite e complicações obstétricas."
+    "explanation": "Em gestantes, bacteriúria assintomática deve ser tratada para prevenir pielonefrite e complicações obstétricas.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest11.UnP.2026",
@@ -609,7 +626,8 @@
       "D": 10
     },
     "explanationTitle": "Cistite aguda",
-    "explanation": "E. coli é responsável por cerca de 70-90% das ITUs comunitárias."
+    "explanation": "E. coli é responsável por cerca de 70-90% das ITUs comunitárias.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest12.UnP.2026",
@@ -643,7 +661,8 @@
       "D": 10
     },
     "explanationTitle": "Prostatite",
-    "explanation": "O toque retal permite avaliar tamanho, consistência e sensibilidade da próstata em prostatites."
+    "explanation": "O toque retal permite avaliar tamanho, consistência e sensibilidade da próstata em prostatites.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest13.UnP.2026",
@@ -677,7 +696,8 @@
       "D": 10
     },
     "explanationTitle": "Litíase urinária",
-    "explanation": "Alta ingestão de líquidos é a medida mais eficaz e evidenciada para prevenção de novos cálculos urinários."
+    "explanation": "Alta ingestão de líquidos é a medida mais eficaz e evidenciada para prevenção de novos cálculos urinários.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest14.UnP.2026",
@@ -711,7 +731,8 @@
       "D": 10
     },
     "explanationTitle": "Cistite crônica",
-    "explanation": "Antibioticoprofilaxia contínua em baixa dose (ex: nitrofurantoína) é eficaz na redução de recorrências de cistite bacteriana."
+    "explanation": "Antibioticoprofilaxia contínua em baixa dose (ex: nitrofurantoína) é eficaz na redução de recorrências de cistite bacteriana.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest15.UnP.2026",
@@ -745,7 +766,8 @@
       "D": 10
     },
     "explanationTitle": "Cistite crônica",
-    "explanation": "Profilaxia contínua em baixa dose reduz significativamente as recorrências em cistite crônica/recorrente após exclusão de causas subjacentes."
+    "explanation": "Profilaxia contínua em baixa dose reduz significativamente as recorrências em cistite crônica/recorrente após exclusão de causas subjacentes.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest16.UnP.2026",
@@ -779,7 +801,8 @@
       "D": 10
     },
     "explanationTitle": "Cistite aguda",
-    "explanation": "Diretrizes internacionais recomendam fosfomicina em dose única como primeira escolha em cistite aguda não complicada por alta eficácia, baixa indução de resistência e excelente adesão terapêutica."
+    "explanation": "Diretrizes internacionais recomendam fosfomicina em dose única como primeira escolha em cistite aguda não complicada por alta eficácia, baixa indução de resistência e excelente adesão terapêutica.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest17.UnP.2026",
@@ -813,7 +836,8 @@
       "D": 10
     },
     "explanationTitle": "Pielonefrite",
-    "explanation": "A associação de febre, dor lombar e sensibilidade lombar define pielonefrite aguda, que exige urocultura prévia e terapia antibiótica com boa penetração renal, podendo requerer hospitalização em pacientes com comorbidades."
+    "explanation": "A associação de febre, dor lombar e sensibilidade lombar define pielonefrite aguda, que exige urocultura prévia e terapia antibiótica com boa penetração renal, podendo requerer hospitalização em pacientes com comorbidades.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest18.UnP.2026",
@@ -847,7 +871,8 @@
       "D": 10
     },
     "explanationTitle": "Cálculo urinário",
-    "explanation": "Cálculos ureterais menores que 5-6 mm apresentam taxa de eliminação espontânea superior a 80% com manejo conservador (analgesia e hidratação), conforme diretrizes de urologia."
+    "explanation": "Cálculos ureterais menores que 5-6 mm apresentam taxa de eliminação espontânea superior a 80% com manejo conservador (analgesia e hidratação), conforme diretrizes de urologia.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest19.UnP.2026",
@@ -881,7 +906,8 @@
       "D": 10
     },
     "explanationTitle": "Uretrite",
-    "explanation": "Devido à alta prevalência de resistência à fluoroquinolona na gonorreia, o tratamento dual (ceftriaxona + azitromicina) é o padrão para cobertura de gonococo e clamídia em uretrite."
+    "explanation": "Devido à alta prevalência de resistência à fluoroquinolona na gonorreia, o tratamento dual (ceftriaxona + azitromicina) é o padrão para cobertura de gonococo e clamídia em uretrite.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest20.UnP.2026",
@@ -915,7 +941,8 @@
       "D": 10
     },
     "explanationTitle": "Cistite crônica",
-    "explanation": "A profilaxia pós-coito com dose única de antibiótico é tão eficaz quanto a contínua, reduzindo o consumo total de antimicrobianos em cistite recorrente pós-relação."
+    "explanation": "A profilaxia pós-coito com dose única de antibiótico é tão eficaz quanto a contínua, reduzindo o consumo total de antimicrobianos em cistite recorrente pós-relação.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest21.UnP.2026",
@@ -949,7 +976,8 @@
       "D": 10
     },
     "explanationTitle": "Prostatite",
-    "explanation": "O toque retal doloroso associado a sintomas sistêmicos caracteriza prostatite aguda bacteriana, exigindo antibióticos com penetração prostática (ex: fluoroquinolonas ou TMP-SMX)."
+    "explanation": "O toque retal doloroso associado a sintomas sistêmicos caracteriza prostatite aguda bacteriana, exigindo antibióticos com penetração prostática (ex: fluoroquinolonas ou TMP-SMX).",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest22.UnP.2026",
@@ -983,7 +1011,8 @@
       "D": 10
     },
     "explanationTitle": "Cervicite",
-    "explanation": "Cervicite mucopurulenta é classicamente associada a clamídia e gonococo; exige investigação e tratamento dual conforme diretrizes de IST."
+    "explanation": "Cervicite mucopurulenta é classicamente associada a clamídia e gonococo; exige investigação e tratamento dual conforme diretrizes de IST.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest23.UnP.2026",
@@ -1017,7 +1046,8 @@
       "D": 10
     },
     "explanationTitle": "Uretrite",
-    "explanation": "Corrimento mucoide discreto em uretrite não gonocócica é mais frequentemente causado por Chlamydia trachomatis."
+    "explanation": "Corrimento mucoide discreto em uretrite não gonocócica é mais frequentemente causado por Chlamydia trachomatis.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest24.UnP.2026",
@@ -1051,7 +1081,8 @@
       "D": 10
     },
     "explanationTitle": "Pielonefrite",
-    "explanation": "Em idosos, bacteriúria associada a sintomas sistêmicos (delirium) deve ser tratada como infecção do trato urinário superior após confirmação laboratorial."
+    "explanation": "Em idosos, bacteriúria associada a sintomas sistêmicos (delirium) deve ser tratada como infecção do trato urinário superior após confirmação laboratorial.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest25.UnP.2026",
@@ -1085,7 +1116,8 @@
       "D": 10
     },
     "explanationTitle": "Pielonefrite",
-    "explanation": "Em crianças pequenas, pielonefrite pode manifestar-se com sintomas gastrointestinais e febre sem disúria clássica."
+    "explanation": "Em crianças pequenas, pielonefrite pode manifestar-se com sintomas gastrointestinais e febre sem disúria clássica.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest26.UnP.2026",
@@ -1119,7 +1151,8 @@
       "D": 10
     },
     "explanationTitle": "Cistite crônica",
-    "explanation": "Profilaxia antibiótica contínua em baixa dose reduz em até 90% as recorrências em cistite crônica após exclusão de causas subjacentes."
+    "explanation": "Profilaxia antibiótica contínua em baixa dose reduz em até 90% as recorrências em cistite crônica após exclusão de causas subjacentes.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest27.UnP.2026",
@@ -1153,7 +1186,8 @@
       "D": 10
     },
     "explanationTitle": "Prostatite",
-    "explanation": "O toque retal permite monitorar alterações prostáticas e sensibilidade em prostatite crônica."
+    "explanation": "O toque retal permite monitorar alterações prostáticas e sensibilidade em prostatite crônica.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest28.UnP.2026",
@@ -1187,7 +1221,8 @@
       "D": 10
     },
     "explanationTitle": "Cistite aguda",
-    "explanation": "Bacteriúria assintomática na gestação deve ser erradicada para prevenir pielonefrite e complicações obstétricas."
+    "explanation": "Bacteriúria assintomática na gestação deve ser erradicada para prevenir pielonefrite e complicações obstétricas.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest29.UnP.2026",
@@ -1221,7 +1256,8 @@
       "D": 10
     },
     "explanationTitle": "Cálculo renal",
-    "explanation": "Cálculos renais >10 mm têm baixa chance de eliminação espontânea e maior risco de complicações, justificando tratamento ativo."
+    "explanation": "Cálculos renais >10 mm têm baixa chance de eliminação espontânea e maior risco de complicações, justificando tratamento ativo.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest30.UnP.2026",
@@ -1255,7 +1291,8 @@
       "D": 10
     },
     "explanationTitle": "Litíase urinária",
-    "explanation": "A hiper-hidratação é a intervenção não farmacológica mais eficaz e evidenciada para reduzir a formação de novos cálculos urinários."
+    "explanation": "A hiper-hidratação é a intervenção não farmacológica mais eficaz e evidenciada para reduzir a formação de novos cálculos urinários.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest31.UnP.2026",
@@ -1289,7 +1326,8 @@
       "D": 10
     },
     "explanationTitle": "Prostatite",
-    "explanation": "Dor perineal aguda pós-esforço + próstata dolorosa ao toque retal + disúria = prostatite aguda bacteriana (emergência que requer antibiótico com penetração prostática)."
+    "explanation": "Dor perineal aguda pós-esforço + próstata dolorosa ao toque retal + disúria = prostatite aguda bacteriana (emergência que requer antibiótico com penetração prostática).",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest32.UnP.2026",
@@ -1323,7 +1361,8 @@
       "D": 10
     },
     "explanationTitle": "Prostatite",
-    "explanation": "Retenção urinária aguda secundária a prostatite aguda (globo vesical + próstata dolorosa) requer desobstrução imediata com cateter vesical de demora."
+    "explanation": "Retenção urinária aguda secundária a prostatite aguda (globo vesical + próstata dolorosa) requer desobstrução imediata com cateter vesical de demora.",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "disuria.quest33.UnP.2026",
@@ -1357,7 +1396,8 @@
       "D": 10
     },
     "explanationTitle": "Cistite crônica",
-    "explanation": "Exame de urina em rastreamento de ITU recorrente permite diagnóstico precoce de bacteriúria/cistite (prevenção secundária)."
+    "explanation": "Exame de urina em rastreamento de ITU recorrente permite diagnóstico precoce de bacteriúria/cistite (prevenção secundária).",
+    "temaGeral": "Infecções do trato urinário"
   },
   {
     "id": "cefaleia.1",
@@ -1391,7 +1431,8 @@
       "D": 10
     },
     "explanationTitle": "Neuralgia do Trigêmeo",
-    "explanation": "O quadro é típico de neuralgia do trigêmeo; a RM de crânio é o exame de escolha para investigar causas secundárias (compressão vascular ou tumoral)."
+    "explanation": "O quadro é típico de neuralgia do trigêmeo; a RM de crânio é o exame de escolha para investigar causas secundárias (compressão vascular ou tumoral).",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.2",
@@ -1425,7 +1466,8 @@
       "D": 70
     },
     "explanationTitle": "Migrânea",
-    "explanation": "A migrânea tem forte componente genético, com história familiar positiva em 70-90% dos casos."
+    "explanation": "A migrânea tem forte componente genético, com história familiar positiva em 70-90% dos casos.",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.3",
@@ -1459,7 +1501,8 @@
       "D": 10
     },
     "explanationTitle": "Migrânea",
-    "explanation": "O quadro preenche todos os critérios ICHD-3 de migrânea sem aura (unilateral pulsátil + náuseas + foto/fonofobia + piora com atividade)."
+    "explanation": "O quadro preenche todos os critérios ICHD-3 de migrânea sem aura (unilateral pulsátil + náuseas + foto/fonofobia + piora com atividade).",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.4",
@@ -1493,7 +1536,8 @@
       "D": 70
     },
     "explanationTitle": "Migrânea",
-    "explanation": "Em migrânea refratária no pronto-socorro após falha de AINE + antiemético, clorpromazina IV é opção eficaz e segura."
+    "explanation": "Em migrânea refratária no pronto-socorro após falha de AINE + antiemético, clorpromazina IV é opção eficaz e segura.",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.5",
@@ -1527,7 +1571,8 @@
       "D": 70
     },
     "explanationTitle": "Migrânea",
-    "explanation": "A ICHD-3 substituiu o termo “migrânea basilar” por “migrânea com aura do tronco cerebral”, com sintomas como diplopia, zumbido, disartria etc."
+    "explanation": "A ICHD-3 substituiu o termo “migrânea basilar” por “migrânea com aura do tronco cerebral”, com sintomas como diplopia, zumbido, disartria etc.",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.6",
@@ -1561,7 +1606,8 @@
       "D": 10
     },
     "explanationTitle": "Migrânea",
-    "explanation": "Topiramato é profilático eficaz para migrânea, especialmente em pacientes obesos (promove perda de peso) e sem contraindicação respiratória (propranolol contraindicado na asma)."
+    "explanation": "Topiramato é profilático eficaz para migrânea, especialmente em pacientes obesos (promove perda de peso) e sem contraindicação respiratória (propranolol contraindicado na asma).",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.7",
@@ -1595,7 +1641,8 @@
       "D": 70
     },
     "explanationTitle": "Cefaleia",
-    "explanation": "Cefaleia crônica com padrão estável não é red flag; os demais itens são sinais de alerta clássicos."
+    "explanation": "Cefaleia crônica com padrão estável não é red flag; os demais itens são sinais de alerta clássicos.",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.8",
@@ -1629,7 +1676,8 @@
       "D": 10
     },
     "explanationTitle": "Cefaleia",
-    "explanation": "Cefaleia súbita + rigidez de nuca (mesmo sem febre) é red flag clássico para hemorragia subaracnóidea."
+    "explanation": "Cefaleia súbita + rigidez de nuca (mesmo sem febre) é red flag clássico para hemorragia subaracnóidea.",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.9",
@@ -1663,7 +1711,8 @@
       "D": 70
     },
     "explanationTitle": "Cefaleia",
-    "explanation": "Cefaleia ortostática (piora ao sentar/levantar e melhora ao deitar) é característica de hipotensão liquórica."
+    "explanation": "Cefaleia ortostática (piora ao sentar/levantar e melhora ao deitar) é característica de hipotensão liquórica.",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.10",
@@ -1697,7 +1746,8 @@
       "D": 10
     },
     "explanationTitle": "Cefaleia",
-    "explanation": "Cefaleia holocraniana ortostática com melhora rápida ao deitar é típica de hipotensão liquórica espontânea."
+    "explanation": "Cefaleia holocraniana ortostática com melhora rápida ao deitar é típica de hipotensão liquórica espontânea.",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.11",
@@ -1731,7 +1781,8 @@
       "D": 70
     },
     "explanationTitle": "Migrânea",
-    "explanation": "Migrânea episódica com frequência >4 crises/mês indica profilaxia (betabloqueador ou topiramato são opções de primeira linha)."
+    "explanation": "Migrânea episódica com frequência >4 crises/mês indica profilaxia (betabloqueador ou topiramato são opções de primeira linha).",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.12",
@@ -1765,7 +1816,8 @@
       "D": 70
     },
     "explanationTitle": "Cefaleia",
-    "explanation": "Aura motora (afasia) ainda é compatível com migrânea com aura; não descarta o diagnóstico."
+    "explanation": "Aura motora (afasia) ainda é compatível com migrânea com aura; não descarta o diagnóstico.",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.13",
@@ -1799,7 +1851,8 @@
       "D": 70
     },
     "explanationTitle": "Cefaleia em Salvas",
-    "explanation": "Cefaleia em salvas apresenta sinais autonômicos ipsilaterais (lacrimejamento, rinorreia, ptose etc.) e duração de 15-180 minutos."
+    "explanation": "Cefaleia em salvas apresenta sinais autonômicos ipsilaterais (lacrimejamento, rinorreia, ptose etc.) e duração de 15-180 minutos.",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.14",
@@ -1833,7 +1886,8 @@
       "D": 10
     },
     "explanationTitle": "Cefaleia em Salvas",
-    "explanation": "Sinais autonômicos são ipsilaterais à dor e a duração típica é de 15 a 180 minutos."
+    "explanation": "Sinais autonômicos são ipsilaterais à dor e a duração típica é de 15 a 180 minutos.",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.15",
@@ -1867,7 +1921,8 @@
       "D": 70
     },
     "explanationTitle": "Cefaleia",
-    "explanation": "Crises curtas (10 min), frequentes (8/dia) + sintomas autonômicos ipsilaterais = hemicrania paroxística; resposta absoluta à indometacina é diagnóstica."
+    "explanation": "Crises curtas (10 min), frequentes (8/dia) + sintomas autonômicos ipsilaterais = hemicrania paroxística; resposta absoluta à indometacina é diagnóstica.",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.quest16.SCM-BH.2023",
@@ -1901,7 +1956,8 @@
       "D": 10
     },
     "explanationTitle": "Migrânea",
-    "explanation": "Toxina botulínica é indicada apenas em migrânea crônica refratária (>15 dias/mês); não é primeira linha para migrânea episódica."
+    "explanation": "Toxina botulínica é indicada apenas em migrânea crônica refratária (>15 dias/mês); não é primeira linha para migrânea episódica.",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.quest17.UNICAMP.2017",
@@ -1935,7 +1991,8 @@
       "D": 70
     },
     "explanationTitle": "Cefaleia em Salvas",
-    "explanation": "Crises curtas, unilaterais, noturnas, com sinais autonômicos ipsilaterais e trigger álcool = cefaleia em salvas."
+    "explanation": "Crises curtas, unilaterais, noturnas, com sinais autonômicos ipsilaterais e trigger álcool = cefaleia em salvas.",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.quest18.UFAL.2021",
@@ -1969,7 +2026,8 @@
       "D": 70
     },
     "explanationTitle": "Cefaleia Tensional",
-    "explanation": "Critérios ICHD-3 para cefaleia tensional episódica permitem foto/fonofobia (mas não náuseas/vômitos)."
+    "explanation": "Critérios ICHD-3 para cefaleia tensional episódica permitem foto/fonofobia (mas não náuseas/vômitos).",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.quest19.PSU-AL.2020",
@@ -2003,7 +2061,8 @@
       "D": 10
     },
     "explanationTitle": "Cefaleia em Salvas",
-    "explanation": "Sinais autonômicos ipsilaterais + dor periorbitária curta = cefaleia em salvas; verapamil é o profilático de escolha."
+    "explanation": "Sinais autonômicos ipsilaterais + dor periorbitária curta = cefaleia em salvas; verapamil é o profilático de escolha.",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.quest20.CESUPA.2021",
@@ -2037,7 +2096,8 @@
       "D": 10
     },
     "explanationTitle": "Migrânea",
-    "explanation": "Características migranosas + uso excessivo recente de analgésicos sugere migrânea com possível overuse; triptano + profilaxia são indicados."
+    "explanation": "Características migranosas + uso excessivo recente de analgésicos sugere migrânea com possível overuse; triptano + profilaxia são indicados.",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.quest21.UFSC.2016",
@@ -2071,7 +2131,8 @@
       "D": 10
     },
     "explanationTitle": "Cefaleia Orgástica",
-    "explanation": "Cefaleia orgástica primária responde bem à indometacina pré-coito."
+    "explanation": "Cefaleia orgástica primária responde bem à indometacina pré-coito.",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.quest23.HMMG.2025",
@@ -2105,7 +2166,8 @@
       "D": 10
     },
     "explanationTitle": "Migrânea",
-    "explanation": "Repouso em ambiente escuro/silencioso é medida não farmacológica recomendada em crianças com migrânea."
+    "explanation": "Repouso em ambiente escuro/silencioso é medida não farmacológica recomendada em crianças com migrânea.",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.quest24.HC-UFG.2015",
@@ -2139,7 +2201,8 @@
       "D": 70
     },
     "explanationTitle": "Cefaleia",
-    "explanation": "Cefaleias primárias e secundárias são síndromes dolorosas que podem ser agudas ou crônicas, independentemente da causa."
+    "explanation": "Cefaleias primárias e secundárias são síndromes dolorosas que podem ser agudas ou crônicas, independentemente da causa.",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.quest25.SES-PE.2022",
@@ -2173,7 +2236,8 @@
       "D": 10
     },
     "explanationTitle": "Migrânea",
-    "explanation": "Múltiplos episódios prévios com características migranosas + ausência de red flags = migrânea."
+    "explanation": "Múltiplos episódios prévios com características migranosas + ausência de red flags = migrânea.",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.quest26.HCPA-e-HMV.2018",
@@ -2207,7 +2271,8 @@
       "D": 70
     },
     "explanationTitle": "Cefaleia",
-    "explanation": "A anamnese detalhada é o principal instrumento diagnóstico em cefaleias; exames são complementares."
+    "explanation": "A anamnese detalhada é o principal instrumento diagnóstico em cefaleias; exames são complementares.",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.quest27.HCPA-e-HMV.2024",
@@ -2241,7 +2306,8 @@
       "D": 10
     },
     "explanationTitle": "Cefaleia",
-    "explanation": "Cefaleia thunderclap, desencadeada por esforço ou Valsalva são red flags clássicos."
+    "explanation": "Cefaleia thunderclap, desencadeada por esforço ou Valsalva são red flags clássicos.",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.quest28.FMUSP.2018",
@@ -2275,7 +2341,8 @@
       "D": 70
     },
     "explanationTitle": "Cefaleia em Salvas",
-    "explanation": "Cefaleia em salvas: oxigênio ou sumatriptano para crise aguda + verapamil para profilaxia."
+    "explanation": "Cefaleia em salvas: oxigênio ou sumatriptano para crise aguda + verapamil para profilaxia.",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.quest29.SES-PE.2023",
@@ -2309,7 +2376,8 @@
       "D": 10
     },
     "explanationTitle": "Migrânea",
-    "explanation": "Cefaleia por overuse de analgésicos (medication-overuse headache) é tratada com suspensão imediata do medicamento abusado."
+    "explanation": "Cefaleia por overuse de analgésicos (medication-overuse headache) é tratada com suspensão imediata do medicamento abusado.",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.quest31.SURCE.2021",
@@ -2343,7 +2411,8 @@
       "D": 70
     },
     "explanationTitle": "Migrânea",
-    "explanation": "Em crise aguda de migrânea com vômitos e falha de analgésicos orais, metoclopramida IV é primeira linha (antiemético + ação antimigranosa)."
+    "explanation": "Em crise aguda de migrânea com vômitos e falha de analgésicos orais, metoclopramida IV é primeira linha (antiemético + ação antimigranosa).",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.quest32.CERMAM.2018",
@@ -2377,7 +2446,8 @@
       "D": 10
     },
     "explanationTitle": "Cefaleia em Salvas",
-    "explanation": "Cefaleia em salvas caracteriza-se por dor excruciante unilateral com sintomas autonômicos ipsilaterais e duração de 15-180 minutos."
+    "explanation": "Cefaleia em salvas caracteriza-se por dor excruciante unilateral com sintomas autonômicos ipsilaterais e duração de 15-180 minutos.",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.quest33.HOS.2026",
@@ -2411,7 +2481,8 @@
       "D": 10
     },
     "explanationTitle": "Migrânea",
-    "explanation": "Migrânea episódica com frequência >4 dias/mês indica profilaxia (betabloqueadores, tricíclicos ou anticonvulsivantes são opções de primeira linha)."
+    "explanation": "Migrânea episódica com frequência >4 dias/mês indica profilaxia (betabloqueadores, tricíclicos ou anticonvulsivantes são opções de primeira linha).",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.quest34.AMRIGS.2022",
@@ -2445,7 +2516,8 @@
       "D": 70
     },
     "explanationTitle": "Migrânea",
-    "explanation": "Topiramato, amitriptilina e divalproato de sódio são todos indicados como profilaxia de migrânea."
+    "explanation": "Topiramato, amitriptilina e divalproato de sódio são todos indicados como profilaxia de migrânea.",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.quest35.HOS.2025",
@@ -2479,7 +2551,8 @@
       "D": 10
     },
     "explanationTitle": "Migrânea",
-    "explanation": "Triptanos são contraindicados em doença arterial coronariana, cerebrovascular ou periférica por risco vasoconstritor."
+    "explanation": "Triptanos são contraindicados em doença arterial coronariana, cerebrovascular ou periférica por risco vasoconstritor.",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.quest37.PSU-MG.2015",
@@ -2513,7 +2586,8 @@
       "D": 70
     },
     "explanationTitle": "Cefaleia em Salvas",
-    "explanation": "O quadro é de cefaleia em salvas; hemicrania contínua é outro diagnóstico (responde à indometacina)."
+    "explanation": "O quadro é de cefaleia em salvas; hemicrania contínua é outro diagnóstico (responde à indometacina).",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.quest38.EINSTEIN.2015",
@@ -2547,7 +2621,8 @@
       "D": 10
     },
     "explanationTitle": "Migrânea",
-    "explanation": "História típica de migrânea com história familiar e exame normal permite diagnóstico clínico sem exames de imagem."
+    "explanation": "História típica de migrânea com história familiar e exame normal permite diagnóstico clínico sem exames de imagem.",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.quest39.PUC-PR.2023",
@@ -2581,7 +2656,8 @@
       "D": 10
     },
     "explanationTitle": "Migrânea",
-    "explanation": "Aura de tronco cerebral (diplopia, ataxia, alteração visual) com RM normal = migrânea com aura do tronco cerebral (antiga “basilar”)."
+    "explanation": "Aura de tronco cerebral (diplopia, ataxia, alteração visual) com RM normal = migrânea com aura do tronco cerebral (antiga “basilar”).",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.quest40.CERMAM.2024",
@@ -2615,7 +2691,8 @@
       "D": 10
     },
     "explanationTitle": "Migrânea",
-    "explanation": "Triptanos são o tratamento abortivo de primeira linha para crises moderadas a graves de migrânea."
+    "explanation": "Triptanos são o tratamento abortivo de primeira linha para crises moderadas a graves de migrânea.",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.quest41.UEL.2023",
@@ -2649,7 +2726,8 @@
       "D": 10
     },
     "explanationTitle": "Migrânea",
-    "explanation": "Topiramato (perda de peso = V), amitriptilina (ganho de peso = F), propranolol (piora asma = F), flunarizina (depressão = V), naratriptano (não profilático = V)."
+    "explanation": "Topiramato (perda de peso = V), amitriptilina (ganho de peso = F), propranolol (piora asma = F), flunarizina (depressão = V), naratriptano (não profilático = V).",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.quest42.SUS-BA.2023",
@@ -2683,7 +2761,8 @@
       "D": 10
     },
     "explanationTitle": "Neuralgia do Trigêmeo",
-    "explanation": "Dor em choque, gatilhos mastigação/frio e alodinia térmica na distribuição trigeminal = neuralgia do trigêmeo."
+    "explanation": "Dor em choque, gatilhos mastigação/frio e alodinia térmica na distribuição trigeminal = neuralgia do trigêmeo.",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "cefaleia.quest43.SES-PE.2018",
@@ -2717,7 +2796,8 @@
       "D": 10
     },
     "explanationTitle": "Migrânea",
-    "explanation": "Migrânea com aura; triptano abortivo precoce é o tratamento de escolha para crises."
+    "explanation": "Migrânea com aura; triptano abortivo precoce é o tratamento de escolha para crises.",
+    "temaGeral": "Neurologia"
   },
   {
     "id": "dor-lombar.quest01.FMUSP-RP.2018",
@@ -2751,7 +2831,8 @@
       "D": 10
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Lombalgia mecânica aguda sem red flags → abordagem conservadora com analgesia e orientação é primeira linha."
+    "explanation": "Lombalgia mecânica aguda sem red flags → abordagem conservadora com analgesia e orientação é primeira linha.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest02.UERJ.2019",
@@ -2785,7 +2866,8 @@
       "D": 10
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Lombalgia inespecífica sem red flags evolui espontaneamente na maioria dos casos; observação é adequada."
+    "explanation": "Lombalgia inespecífica sem red flags evolui espontaneamente na maioria dos casos; observação é adequada.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest03.SES-RJ.2020",
@@ -2819,7 +2901,8 @@
       "D": 10
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Perda ponderal não explicada é red flag clássico para neoplasia ou infecção na lombalgia."
+    "explanation": "Perda ponderal não explicada é red flag clássico para neoplasia ou infecção na lombalgia.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest04.EINSTEIN.2017",
@@ -2853,7 +2936,8 @@
       "D": 10
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Lombalgia mecânica aguda sem red flags → manter atividade conforme tolerância (evidência forte)."
+    "explanation": "Lombalgia mecânica aguda sem red flags → manter atividade conforme tolerância (evidência forte).",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest05.HOS.2025",
@@ -2887,7 +2971,8 @@
       "D": 70
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "RX lombar tem baixa sensibilidade para causas graves, mas é acessível e útil em casos selecionados."
+    "explanation": "RX lombar tem baixa sensibilidade para causas graves, mas é acessível e útil em casos selecionados.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest06.PUC-PR.2015",
@@ -2921,7 +3006,8 @@
       "D": 10
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Dor que piora com movimento é típica de lombalgia mecânica (não red flag)."
+    "explanation": "Dor que piora com movimento é típica de lombalgia mecânica (não red flag).",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest07.SMS-PIRACICABA.2021",
@@ -2955,7 +3041,8 @@
       "D": 10
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "História de neoplasia é red flag clássico para metástase vertebral."
+    "explanation": "História de neoplasia é red flag clássico para metástase vertebral.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest08.PUC-RS.2019",
@@ -2989,7 +3076,8 @@
       "D": 10
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Lombalgia persistente >6 semanas sem resposta → RX simples + exames laboratoriais."
+    "explanation": "Lombalgia persistente >6 semanas sem resposta → RX simples + exames laboratoriais.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest09.FMUSP-RP.2020",
@@ -3023,7 +3111,8 @@
       "D": 10
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Dor lombar com irradiação + cálculo pequeno sem obstrução → lombalgia mecânica; tratar ortopedicamente."
+    "explanation": "Dor lombar com irradiação + cálculo pequeno sem obstrução → lombalgia mecânica; tratar ortopedicamente.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest10.UFCSPA.2026",
@@ -3057,7 +3146,8 @@
       "D": 10
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Sono ruim e dor prévia são fatores de risco para cronificação; estresse ocupacional é fator de risco."
+    "explanation": "Sono ruim e dor prévia são fatores de risco para cronificação; estresse ocupacional é fator de risco.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest11.HP.2024",
@@ -3091,7 +3181,8 @@
       "D": 10
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Baixo risco STarT Back → AINE ± relaxante + manter ativo + calor."
+    "explanation": "Baixo risco STarT Back → AINE ± relaxante + manter ativo + calor.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest12.ENARE.2026",
@@ -3125,7 +3216,8 @@
       "D": 70
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Lombalgia subaguda sem red flags → educação, analgesia e reavaliação em 4-6 semanas."
+    "explanation": "Lombalgia subaguda sem red flags → educação, analgesia e reavaliação em 4-6 semanas.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest13.FMUSP-RP.2023",
@@ -3159,7 +3251,8 @@
       "D": 10
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Lombalgia aguda sem red flags → sem indicação de imagem."
+    "explanation": "Lombalgia aguda sem red flags → sem indicação de imagem.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest14.CERMAM.2022",
@@ -3193,7 +3286,8 @@
       "D": 10
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Lombalgia mecânica aguda em jovem sem red flags dispensa investigação."
+    "explanation": "Lombalgia mecânica aguda em jovem sem red flags dispensa investigação.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest15.SCM-RP.2017",
@@ -3227,7 +3321,8 @@
       "D": 70
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Lombalgia inespecífica → AINE curto período + reavaliação."
+    "explanation": "Lombalgia inespecífica → AINE curto período + reavaliação.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest16.UEL.2024",
@@ -3261,7 +3356,8 @@
       "D": 70
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Dor matinal + rigidez + piora ao ficar em pé + alívio ao deitar = espondilose degenerativa."
+    "explanation": "Dor matinal + rigidez + piora ao ficar em pé + alívio ao deitar = espondilose degenerativa.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest17.HCPA-e-HMV.2016",
@@ -3295,7 +3391,8 @@
       "D": 70
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "História de câncer, febre/imunossupressão e disfunção esfincteriana são red flags graves."
+    "explanation": "História de câncer, febre/imunossupressão e disfunção esfincteriana são red flags graves.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest18.HCPA-e-HMV.2023",
@@ -3329,7 +3426,8 @@
       "D": 10
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Lombalgia aguda sem red flags → AINE é opção eficaz."
+    "explanation": "Lombalgia aguda sem red flags → AINE é opção eficaz.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest19.REVALIDA.2025",
@@ -3363,7 +3461,8 @@
       "D": 70
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Lombalgia subaguda sem red flags → manter ativo + AINE + relaxante."
+    "explanation": "Lombalgia subaguda sem red flags → manter ativo + AINE + relaxante.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest20.UNIFESP.2026",
@@ -3397,7 +3496,8 @@
       "D": 10
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Imagem mostra RM com sinais de degeneração discal e hérnia extrusa."
+    "explanation": "Imagem mostra RM com sinais de degeneração discal e hérnia extrusa.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest21.FMUSP.2017",
@@ -3431,7 +3531,8 @@
       "D": 10
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "História de câncer + idade >50 + dor persistente = red flags que indicam necessidade de imagem (RX inicial)."
+    "explanation": "História de câncer + idade >50 + dor persistente = red flags que indicam necessidade de imagem (RX inicial).",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest22.SUS-SP.2024",
@@ -3465,7 +3566,8 @@
       "D": 70
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Lombalgia mecânica aguda sem red flags → não indicar imagem nas primeiras 6 semanas (recomendação Choosing Wisely)."
+    "explanation": "Lombalgia mecânica aguda sem red flags → não indicar imagem nas primeiras 6 semanas (recomendação Choosing Wisely).",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest23.SURCE.2018",
@@ -3499,7 +3601,8 @@
       "D": 10
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Lombalgia crônica mecânica → exercício físico aeróbico e alongamento são pilares do tratamento."
+    "explanation": "Lombalgia crônica mecânica → exercício físico aeróbico e alongamento são pilares do tratamento.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest24.CERMAM.2018",
@@ -3533,7 +3636,8 @@
       "D": 10
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Lombalgia inflamatória típica piora com repouso e melhora com movimento."
+    "explanation": "Lombalgia inflamatória típica piora com repouso e melhora com movimento.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest25.UERJ.2025",
@@ -3567,7 +3671,8 @@
       "D": 10
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "A grande maioria das lombalgias agudas é autolimitada e melhora em até 3 meses."
+    "explanation": "A grande maioria das lombalgias agudas é autolimitada e melhora em até 3 meses.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest26.AMRIGS.2017",
@@ -3601,7 +3706,8 @@
       "D": 70
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Laudo para INSS não é red flag e não indica imagem ou cirurgia."
+    "explanation": "Laudo para INSS não é red flag e não indica imagem ou cirurgia.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest27.ENARE.2025",
@@ -3635,7 +3741,8 @@
       "D": 10
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Idade avançada + sintomas sugestivos de possível infecção/neoplasia → exames laboratoriais iniciais + RX, com RM se persistir."
+    "explanation": "Idade avançada + sintomas sugestivos de possível infecção/neoplasia → exames laboratoriais iniciais + RX, com RM se persistir.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest28.UNIRIO.2018",
@@ -3669,7 +3776,8 @@
       "D": 70
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Lombalgia aguda sem red flags em paciente obesa → AINE + restrição temporária de atividades."
+    "explanation": "Lombalgia aguda sem red flags em paciente obesa → AINE + restrição temporária de atividades.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest29.PUC-PR.2018",
@@ -3703,7 +3811,8 @@
       "D": 70
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Dor noturna + parestesia perineal + duração >3 meses = red flags → RX + referência."
+    "explanation": "Dor noturna + parestesia perineal + duração >3 meses = red flags → RX + referência.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest30.SES-GO.2022",
@@ -3737,7 +3846,8 @@
       "D": 70
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Sedentarismo é fator de risco estabelecido para lombalgia."
+    "explanation": "Sedentarismo é fator de risco estabelecido para lombalgia.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest31.FMUSP.2026",
@@ -3771,7 +3881,8 @@
       "D": 10
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Dor intensa com incapacidade funcional é forte preditor de cronificação."
+    "explanation": "Dor intensa com incapacidade funcional é forte preditor de cronificação.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest32.AMP.2024",
@@ -3805,7 +3916,8 @@
       "D": 70
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Fatores psicossociais (\"yellow flags\") como catastrofização e depressão são importantes para risco de cronicidade."
+    "explanation": "Fatores psicossociais (\"yellow flags\") como catastrofização e depressão são importantes para risco de cronicidade.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest33.FMUSP.2020",
@@ -3839,7 +3951,8 @@
       "D": 10
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Dor crônica mecânica com imagem sem compressão radicular = lombalgia mecânica inespecífica."
+    "explanation": "Dor crônica mecânica com imagem sem compressão radicular = lombalgia mecânica inespecífica.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest34.UEM.2018",
@@ -3873,7 +3986,8 @@
       "D": 10
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Correlação correta: macrossomia → diabete gestacional; endoteliose → pré-eclâmpsia; oligodramnia → malformações urinárias; colo curto → parto pré-termo; PAI → aloimunização."
+    "explanation": "Correlação correta: macrossomia → diabete gestacional; endoteliose → pré-eclâmpsia; oligodramnia → malformações urinárias; colo curto → parto pré-termo; PAI → aloimunização.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest35.UFPR.2021",
@@ -3907,7 +4021,8 @@
       "D": 70
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "História ocupacional/recreacional é fundamental na avaliação da lombalgia."
+    "explanation": "História ocupacional/recreacional é fundamental na avaliação da lombalgia.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest36.EINSTEIN.2018",
@@ -3941,7 +4056,8 @@
       "D": 10
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Idade avançada + dor >1 mês + trauma + história de câncer = múltiplos red flags."
+    "explanation": "Idade avançada + dor >1 mês + trauma + história de câncer = múltiplos red flags.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest37.REVALIDA.2023",
@@ -3975,7 +4091,8 @@
       "D": 10
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Lombalgia mecânica aguda → tratamento conservador."
+    "explanation": "Lombalgia mecânica aguda → tratamento conservador.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest38.IPSEMG.2020",
@@ -4009,7 +4126,8 @@
       "D": 10
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "RX lombar não é indicado na lombalgia mecânica inicial."
+    "explanation": "RX lombar não é indicado na lombalgia mecânica inicial.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest39.UNICAMP.2018",
@@ -4043,7 +4161,8 @@
       "D": 10
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Adolescentes altos e magros com dor lombar frequentemente têm problemas posturais ou de alongamento."
+    "explanation": "Adolescentes altos e magros com dor lombar frequentemente têm problemas posturais ou de alongamento.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dor-lombar.quest40.REVALIDA.2023",
@@ -4077,7 +4196,8 @@
       "D": 10
     },
     "explanationTitle": "Lombalgia",
-    "explanation": "Dor noturna + incontinência urinária + dor à palpação óssea = red flags para possível compressão ou infecção → imagem."
+    "explanation": "Dor noturna + incontinência urinária + dor à palpação óssea = red flags para possível compressão ou infecção → imagem.",
+    "temaGeral": "Ortopedia e lesões musculoesqueléticas"
   },
   {
     "id": "dispneia.quest01.PUC-SOROCABA.2019",
@@ -4111,7 +4231,8 @@
       "D": 10
     },
     "explanationTitle": "Pneumonia Adquirida na Comunidade",
-    "explanation": "CURB-65 de 0–1 ponto indica tratamento ambulatorial com mortalidade de 1,5%."
+    "explanation": "CURB-65 de 0–1 ponto indica tratamento ambulatorial com mortalidade de 1,5%.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest02.IPSEMG.2025",
@@ -4145,7 +4266,8 @@
       "D": 10
     },
     "explanationTitle": "Insuficiência Cardíaca",
-    "explanation": "IECA bloqueiam o sistema renina-angiotensina-aldosterona, reduzindo remodelamento ventricular e melhorando função cardíaca."
+    "explanation": "IECA bloqueiam o sistema renina-angiotensina-aldosterona, reduzindo remodelamento ventricular e melhorando função cardíaca.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest03.AMP.2022",
@@ -4179,7 +4301,8 @@
       "D": 10
     },
     "explanationTitle": "Insuficiência Cardíaca",
-    "explanation": "O edema periférico da IC ambulatorial tende a ser simétrico, envolvendo tornozelos e região pré-tibial. Em paciente sem pneumopatia, estertores à ausculta favorecem IC. Já na IC crônica, a ausência de estertores é relativamente comum, mesmo com aumento das pressões de enchimento, tornando a afirmativa III falsa."
+    "explanation": "O edema periférico da IC ambulatorial tende a ser simétrico, envolvendo tornozelos e região pré-tibial. Em paciente sem pneumopatia, estertores à ausculta favorecem IC. Já na IC crônica, a ausência de estertores é relativamente comum, mesmo com aumento das pressões de enchimento, tornando a afirmativa III falsa.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest04.SURCE.2022",
@@ -4213,7 +4336,8 @@
       "D": 10
     },
     "explanationTitle": "Asma",
-    "explanation": "Tosse recorrente, cansaço, resposta parcial a salbutamol + história familiar de atopia = asma intermitente."
+    "explanation": "Tosse recorrente, cansaço, resposta parcial a salbutamol + história familiar de atopia = asma intermitente.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest05.AMRIGS.2020",
@@ -4247,7 +4371,8 @@
       "D": 10
     },
     "explanationTitle": "Insuficiência Cardíaca",
-    "explanation": "IECA, antagonistas da aldosterona e betabloqueadores reduzem mortalidade na IC com FE reduzida."
+    "explanation": "IECA, antagonistas da aldosterona e betabloqueadores reduzem mortalidade na IC com FE reduzida.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest06.SCM-GO.2021",
@@ -4281,7 +4406,8 @@
       "D": 10
     },
     "explanationTitle": "Asma",
-    "explanation": "Sintomas controlados com baixo dose de corticoide inalatório + uso raro de resgate = asma leve persistente controlada (GINA 2019)."
+    "explanation": "Sintomas controlados com baixo dose de corticoide inalatório + uso raro de resgate = asma leve persistente controlada (GINA 2019).",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest07.PSU-GO.2024",
@@ -4315,7 +4441,8 @@
       "D": 70
     },
     "explanationTitle": "Insuficiência Cardíaca",
-    "explanation": "FEVE ≤35% + classe funcional II–III + QRS alargado = indicação de CDI para prevenção de morte súbita."
+    "explanation": "FEVE ≤35% + classe funcional II–III + QRS alargado = indicação de CDI para prevenção de morte súbita.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest08.EINSTEIN.2015",
@@ -4349,7 +4476,8 @@
       "D": 10
     },
     "explanationTitle": "Insuficiência Cardíaca",
-    "explanation": "Insuficiência aórtica causa ICC de alto débito por aumento de volume; todas as demais são causas clássicas de alto débito."
+    "explanation": "Insuficiência aórtica causa ICC de alto débito por aumento de volume; todas as demais são causas clássicas de alto débito.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest09.FMUSP.2025",
@@ -4383,7 +4511,8 @@
       "D": 70
     },
     "explanationTitle": "Insuficiência Cardíaca",
-    "explanation": "Recuperação da FEVE para 54% com terapia otimizada (ARNI + betabloqueador + MRA + SGLT2i) → manter tratamento atual."
+    "explanation": "Recuperação da FEVE para 54% com terapia otimizada (ARNI + betabloqueador + MRA + SGLT2i) → manter tratamento atual.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest10.UNESP.2019",
@@ -4417,7 +4546,8 @@
       "D": 10
     },
     "explanationTitle": "DPOC",
-    "explanation": "GOLD 2019: VEF1 30–50% + ≥2 exacerbações = grupo D → broncodilatação dupla (LAMA + LABA)."
+    "explanation": "GOLD 2019: VEF1 30–50% + ≥2 exacerbações = grupo D → broncodilatação dupla (LAMA + LABA).",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest11.SMS-SP.2017",
@@ -4451,7 +4581,8 @@
       "D": 10
     },
     "explanationTitle": "Pneumonia",
-    "explanation": "Pneumonia grave (choque, taquipneia, hipoxemia) → UTI + cobertura para pneumococo + atípicos (ceftriaxona + azitromicina)."
+    "explanation": "Pneumonia grave (choque, taquipneia, hipoxemia) → UTI + cobertura para pneumococo + atípicos (ceftriaxona + azitromicina).",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest12.HPEV.2016",
@@ -4485,7 +4616,8 @@
       "D": 10
     },
     "explanationTitle": "Insuficiência Cardíaca",
-    "explanation": "Betabloqueador (metoprolol), IECA (ramipril) e antagonista mineralocorticóide (espironolactona) reduzem mortalidade na IC."
+    "explanation": "Betabloqueador (metoprolol), IECA (ramipril) e antagonista mineralocorticóide (espironolactona) reduzem mortalidade na IC.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest13.SCMSP.2024",
@@ -4519,7 +4651,8 @@
       "D": 70
     },
     "explanationTitle": "Pneumonia",
-    "explanation": "Legionelose clássica: hiponatremia (SIADH), sintomas GI, dissociação pulso-temperatura."
+    "explanation": "Legionelose clássica: hiponatremia (SIADH), sintomas GI, dissociação pulso-temperatura.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest14.UFES.2015",
@@ -4553,7 +4686,8 @@
       "D": 70
     },
     "explanationTitle": "Insuficiência Cardíaca",
-    "explanation": "Digoxina é indicada em IC com FEVE reduzida (geralmente <40%) com sintomas persistentes, não em FEVE <60%."
+    "explanation": "Digoxina é indicada em IC com FEVE reduzida (geralmente <40%) com sintomas persistentes, não em FEVE <60%.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest15.UFSC.2021",
@@ -4587,7 +4721,8 @@
       "D": 10
     },
     "explanationTitle": "DPOC",
-    "explanation": "Obstrução fixa (pouca reversibilidade) + tabagismo + idade = DPOC; broncodilatadores + medidas não farmacológicas são indicados."
+    "explanation": "Obstrução fixa (pouca reversibilidade) + tabagismo + idade = DPOC; broncodilatadores + medidas não farmacológicas são indicados.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest16.FAMEMA.2024",
@@ -4621,7 +4756,8 @@
       "D": 10
     },
     "explanationTitle": "Insuficiência Cardíaca",
-    "explanation": "FEVE ≤40% + IC sintomática + uso de IECA/betabloqueador → adição de antagonista mineralocorticóide (eplerenona) reduz mortalidade."
+    "explanation": "FEVE ≤40% + IC sintomática + uso de IECA/betabloqueador → adição de antagonista mineralocorticóide (eplerenona) reduz mortalidade.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest17.SES-DF.2026",
@@ -4655,7 +4791,8 @@
       "D": 10
     },
     "explanationTitle": "Insuficiência Cardíaca",
-    "explanation": "Ecocardiograma é o exame de escolha para avaliação precisa de função sistólica e diastólica ventricular."
+    "explanation": "Ecocardiograma é o exame de escolha para avaliação precisa de função sistólica e diastólica ventricular.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest18.PSU-AL.2025",
@@ -4689,7 +4826,8 @@
       "D": 10
     },
     "explanationTitle": "Pneumonia",
-    "explanation": "Pneumonia não tratada pode evoluir com derrame parapneumônico e, em pacientes com fatores de risco, embolia pulmonar."
+    "explanation": "Pneumonia não tratada pode evoluir com derrame parapneumônico e, em pacientes com fatores de risco, embolia pulmonar.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest19.SURCE.2024",
@@ -4723,7 +4861,8 @@
       "D": 10
     },
     "explanationTitle": "Insuficiência Cardíaca",
-    "explanation": "IC com FE reduzida otimizada com IECA + betabloqueador + MRA → adicionar inibidor de SGLT2 (dapagliflozina) reduz mortalidade e hospitalizações."
+    "explanation": "IC com FE reduzida otimizada com IECA + betabloqueador + MRA → adicionar inibidor de SGLT2 (dapagliflozina) reduz mortalidade e hospitalizações.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest20.SCMSP.2015",
@@ -4757,7 +4896,8 @@
       "D": 10
     },
     "explanationTitle": "Asma",
-    "explanation": "Sintomas sugestivos de asma (tosse noturna, dispneia desencadeada por triggers) → espirometria com prova broncodilatadora é o exame inicial."
+    "explanation": "Sintomas sugestivos de asma (tosse noturna, dispneia desencadeada por triggers) → espirometria com prova broncodilatadora é o exame inicial.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest21.HEVV.2020",
@@ -4791,7 +4931,8 @@
       "D": 70
     },
     "explanationTitle": "Insuficiência Cardíaca",
-    "explanation": "Controle rigoroso de comorbidades (HAS, DM, obesidade) é a principal estratégia para prevenir descompensação na ICFEp."
+    "explanation": "Controle rigoroso de comorbidades (HAS, DM, obesidade) é a principal estratégia para prevenir descompensação na ICFEp.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest22.HNMD.2022",
@@ -4825,7 +4966,8 @@
       "D": 70
     },
     "explanationTitle": "DPOC",
-    "explanation": "DPOC caracteriza-se por obstrução ao fluxo aéreo com redução de VEF1 e VEF1/CVF na espirometria."
+    "explanation": "DPOC caracteriza-se por obstrução ao fluxo aéreo com redução de VEF1 e VEF1/CVF na espirometria.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest23.AMP.2018",
@@ -4859,7 +5001,8 @@
       "D": 70
     },
     "explanationTitle": "Insuficiência Cardíaca",
-    "explanation": "Na ICFEp, candesartana reduz hospitalizações; inibidores de PDE-5 podem melhorar classe funcional em alguns casos; digoxina não tem benefício comprovado em mortalidade na ICFEp."
+    "explanation": "Na ICFEp, candesartana reduz hospitalizações; inibidores de PDE-5 podem melhorar classe funcional em alguns casos; digoxina não tem benefício comprovado em mortalidade na ICFEp.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest24.IAMSPE.2017",
@@ -4893,7 +5036,8 @@
       "D": 10
     },
     "explanationTitle": "Insuficiência Cardíaca",
-    "explanation": "Hipocalcemia grave pode causar miocardiopatia dilatada reversível."
+    "explanation": "Hipocalcemia grave pode causar miocardiopatia dilatada reversível.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest25.FMUSP-RP.2018",
@@ -4927,7 +5071,8 @@
       "D": 10
     },
     "explanationTitle": "DPOC",
-    "explanation": "Broncodilatadores de longa ação reduzem exacerbações em DPOC grave."
+    "explanation": "Broncodilatadores de longa ação reduzem exacerbações em DPOC grave.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest26.UERJ.2022",
@@ -4961,7 +5106,8 @@
       "D": 10
     },
     "explanationTitle": "Pneumonia",
-    "explanation": "Cobertura para atípicos (clamídia/micoplasma) + pneumococo em jovem → macrolídeo (claritromicina)."
+    "explanation": "Cobertura para atípicos (clamídia/micoplasma) + pneumococo em jovem → macrolídeo (claritromicina).",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest27.IPSEMG.2025",
@@ -4995,7 +5141,8 @@
       "D": 10
     },
     "explanationTitle": "Pneumonia",
-    "explanation": "Fatores de risco para Pseudomonas em PAC hospitalar: uso recente de antibióticos, hospitalizações prévias, bronquiectasias ou imunossupressão."
+    "explanation": "Fatores de risco para Pseudomonas em PAC hospitalar: uso recente de antibióticos, hospitalizações prévias, bronquiectasias ou imunossupressão.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest28.SES-GO.2021",
@@ -5029,7 +5176,8 @@
       "D": 70
     },
     "explanationTitle": "Insuficiência Cardíaca",
-    "explanation": "Sacubitril (inibidor de neprilisina) aumenta BNP por reduzir sua degradação."
+    "explanation": "Sacubitril (inibidor de neprilisina) aumenta BNP por reduzir sua degradação.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest29.HRPP.2026",
@@ -5063,7 +5211,8 @@
       "D": 10
     },
     "explanationTitle": "Asma",
-    "explanation": "Asma leve/intermitente com teste de broncoprovocação positivo deve receber tratamento anti-inflamatório desde o início; a opção preferencial é corticoide inalatório associado a formoterol conforme sintomas."
+    "explanation": "Asma leve/intermitente com teste de broncoprovocação positivo deve receber tratamento anti-inflamatório desde o início; a opção preferencial é corticoide inalatório associado a formoterol conforme sintomas.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest30.CERMAM.2024",
@@ -5097,7 +5246,8 @@
       "D": 10
     },
     "explanationTitle": "DPOC",
-    "explanation": "DPOC grupo E (exacerbações frequentes + VEF1 <60%) → LABA + LAMA + ICS + reabilitação + vacinas."
+    "explanation": "DPOC grupo E (exacerbações frequentes + VEF1 <60%) → LABA + LAMA + ICS + reabilitação + vacinas.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest31.PUC-RS.2023",
@@ -5131,7 +5281,8 @@
       "D": 10
     },
     "explanationTitle": "Insuficiência Cardíaca",
-    "explanation": "Em paciente com IC classe III + DM2, inibidor de SGLT2 (empagliflozina) reduz mortalidade cardiovascular e hospitalizações."
+    "explanation": "Em paciente com IC classe III + DM2, inibidor de SGLT2 (empagliflozina) reduz mortalidade cardiovascular e hospitalizações.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest32.HECI.2022",
@@ -5165,7 +5316,8 @@
       "D": 10
     },
     "explanationTitle": "Pneumonia",
-    "explanation": "Pneumonia adquirida na comunidade leve em paciente sem comorbidades → macrolídeo (azitromicina) cobre pneumococo e atípicos."
+    "explanation": "Pneumonia adquirida na comunidade leve em paciente sem comorbidades → macrolídeo (azitromicina) cobre pneumococo e atípicos.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest33.UFSC.2020",
@@ -5199,7 +5351,8 @@
       "D": 70
     },
     "explanationTitle": "Insuficiência Cardíaca",
-    "explanation": "FEVE preservada + sintomas clássicos de IC (dispneia, ortopneia, edema, turgência jugular) = insuficiência cardíaca com fração de ejeção preservada (ICFEp)."
+    "explanation": "FEVE preservada + sintomas clássicos de IC (dispneia, ortopneia, edema, turgência jugular) = insuficiência cardíaca com fração de ejeção preservada (ICFEp).",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest34.PUC-PR.2021",
@@ -5233,7 +5386,8 @@
       "D": 10
     },
     "explanationTitle": "DPOC",
-    "explanation": "Em exacerbação de DPOC com saturação baixa, oxigênio titulado com alvo 88-92% (máscara Venturi) evita hipercapnia."
+    "explanation": "Em exacerbação de DPOC com saturação baixa, oxigênio titulado com alvo 88-92% (máscara Venturi) evita hipercapnia.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest35.AMRIGS.2016",
@@ -5267,7 +5421,8 @@
       "D": 10
     },
     "explanationTitle": "Insuficiência Cardíaca",
-    "explanation": "IC com FE 45% (reduzida) + sintomas → betabloqueador (metoprolol) é indicado para redução de mortalidade."
+    "explanation": "IC com FE 45% (reduzida) + sintomas → betabloqueador (metoprolol) é indicado para redução de mortalidade.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest36.SCM-BH.2015",
@@ -5301,7 +5456,8 @@
       "D": 10
     },
     "explanationTitle": "DPOC",
-    "explanation": "Paciente com exacerbação de DPOC tem retenção crônica de CO₂ (hipercapnia compensada); não há indicação imediata de UTI se estável."
+    "explanation": "Paciente com exacerbação de DPOC tem retenção crônica de CO₂ (hipercapnia compensada); não há indicação imediata de UTI se estável.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest37.HPEV.2020",
@@ -5335,7 +5491,8 @@
       "D": 10
     },
     "explanationTitle": "Pneumonia",
-    "explanation": "Pneumonia grave (idade avançada, confusão, taquipneia, comorbidades) → internação + cobertura para pneumococo e atípicos (ceftriaxona + claritromicina)."
+    "explanation": "Pneumonia grave (idade avançada, confusão, taquipneia, comorbidades) → internação + cobertura para pneumococo e atípicos (ceftriaxona + claritromicina).",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest38.SCMM.2019",
@@ -5369,7 +5526,8 @@
       "D": 10
     },
     "explanationTitle": "Asma",
-    "explanation": "Erros de técnica inalatória são muito frequentes e envolvem tanto pacientes quanto profissionais de saúde."
+    "explanation": "Erros de técnica inalatória são muito frequentes e envolvem tanto pacientes quanto profissionais de saúde.",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest39.CMC.2025",
@@ -5403,7 +5561,8 @@
       "D": 10
     },
     "explanationTitle": "Asma",
-    "explanation": "Corticoides inalatórios em baixa dose são o tratamento de controle de primeira linha na asma persistente leve em crianças (GINA)."
+    "explanation": "Corticoides inalatórios em baixa dose são o tratamento de controle de primeira linha na asma persistente leve em crianças (GINA).",
+    "temaGeral": "Pneumologia"
   },
   {
     "id": "dispneia.quest40.UNESP.2026",
@@ -5437,6 +5596,7 @@
       "D": 70
     },
     "explanationTitle": "Asma",
-    "explanation": "Budesonida + formoterol em SMART (resgate + manutenção) é estratégia recomendada em asma persistente moderada/grave."
+    "explanation": "Budesonida + formoterol em SMART (resgate + manutenção) é estratégia recomendada em asma persistente moderada/grave.",
+    "temaGeral": "Pneumologia"
   }
 ]

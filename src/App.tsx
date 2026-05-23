@@ -4,6 +4,7 @@ import {
   BookOpenCheck,
   Check,
   Download,
+  Filter,
   HelpCircle,
   Lightbulb,
   Lock,
@@ -17,8 +18,10 @@ import {
   Sparkles,
   X,
 } from "lucide-react";
-import { questionBank, type Option, type Question } from "./data/questions";
+import { getTemaGeral, questionBank, type Option, type Question } from "./data/questions";
+import DesktopApp from "./DesktopApp";
 import Module2App from "./module2/Module2App";
+import FormattedExplanation from "./FormattedExplanation";
 import OfficialQuestionValidatorDashboard from "./OfficialQuestionValidatorDashboard";
 import QuestionAttachments from "./QuestionAttachments";
 import QuestionEditorDashboard from "./QuestionEditorDashboard";
@@ -40,8 +43,51 @@ const DRAG_COMMIT_MIN_DISTANCE = 132;
 const DRAG_COMMIT_VELOCITY = 1.15;
 const DRAG_TRANSITION_MS = 240;
 const TUTORIAL_STORAGE_KEY = "questmed:tutorial-seen";
+const FIRST_QUESTION_SCROLL_HINT_STORAGE_KEY = "questmed:first-question-scroll-hint-seen";
+const SECOND_QUESTION_SCROLL_HINT_STORAGE_KEY = "questmed:second-question-scroll-hint-seen";
 const QUESTION_EXPOSURE_STORAGE_KEY = "questmed:recent-question-exposures";
 const RECENT_EXPOSURE_LIMIT = Math.min(questionBank.length, QUESTION_LIMIT * 8);
+
+type AreaFilterId = "all" | "gynecology-obstetrics" | "preventive" | "surgery" | "internal-medicine" | "pediatrics";
+
+type AreaFilter = {
+  id: AreaFilterId;
+  label: string;
+  matches: (question: Question) => boolean;
+};
+
+const areaFilters: AreaFilter[] = [
+  {
+    id: "all",
+    label: "Todas",
+    matches: () => true,
+  },
+  {
+    id: "gynecology-obstetrics",
+    label: "GO",
+    matches: (question) => question.area === "Ginecologia e Obstetrícia",
+  },
+  {
+    id: "preventive",
+    label: "Prevent",
+    matches: (question) => ["Medicina Preventiva", "Preventiva", "Medicina Preventiva e Social"].includes(question.area),
+  },
+  {
+    id: "internal-medicine",
+    label: "Clinica",
+    matches: (question) => question.area === "Clínica Médica",
+  },
+  {
+    id: "pediatrics",
+    label: "PED",
+    matches: (question) => question.area === "Pediatria",
+  },
+  {
+    id: "surgery",
+    label: "Cirurgia",
+    matches: (question) => question.area === "Cirurgia",
+  },
+];
 
 type FlowStep = "question" | "videoModal" | "finished";
 
@@ -90,7 +136,17 @@ type GestureStart = {
   time: number;
 };
 
-type TutorialTarget = "welcome" | "question" | "confirm" | "hint" | "eliminate" | "timer" | "swipe" | "feedback" | "result";
+type TutorialTarget =
+  | "welcome"
+  | "areaFilter"
+  | "question"
+  | "confirm"
+  | "hint"
+  | "eliminate"
+  | "timer"
+  | "swipe"
+  | "feedback"
+  | "result";
 
 type TutorialStep = {
   target: TutorialTarget;
@@ -141,6 +197,11 @@ const tutorialSteps: TutorialStep[] = [
     target: "welcome",
     title: "Bem-vindo ao QuestMED",
     body: "Resolva 10 questões por dia, com tempo limitado e feedback imediato.",
+  },
+  {
+    target: "areaFilter",
+    title: "Escolha uma área",
+    body: "Use o filtro para treinar todas as questões ou focar em GO, Prevent, Clínica, PED ou Cirurgia.",
   },
   {
     target: "question",
@@ -260,14 +321,20 @@ function getQuestionSelectionScore(
   return recencyPenalty + exposurePenalty + Math.random();
 }
 
-function createQuestionSet(exposureCounts: Record<string, number> = {}) {
+function getAreaFilter(filterId: AreaFilterId) {
+  return areaFilters.find((filter) => filter.id === filterId) ?? areaFilters[0];
+}
+
+function createQuestionSet(exposureCounts: Record<string, number> = {}, areaFilterId: AreaFilterId = "all") {
   const recentQuestionIds = readRecentQuestionExposures();
-  const themes = Array.from(new Set(questionBank.map((question) => question.Tema)));
+  const activeAreaFilter = getAreaFilter(areaFilterId);
+  const availableQuestions = questionBank.filter(activeAreaFilter.matches);
+  const themes = Array.from(new Set(availableQuestions.map(getTemaGeral)));
   const buckets = new Map(
     themes.map((theme) => [
       theme,
-      questionBank
-        .filter((question) => question.Tema === theme)
+      availableQuestions
+        .filter((question) => getTemaGeral(question) === theme)
         .map((question) => ({
           question,
           score: getQuestionSelectionScore(question, recentQuestionIds, exposureCounts),
@@ -297,7 +364,7 @@ function createQuestionSet(exposureCounts: Record<string, number> = {}) {
 
     round += 1;
 
-    if (round > questionBank.length + themeOrder.length) {
+    if (round > availableQuestions.length + themeOrder.length) {
       break;
     }
   }
@@ -802,9 +869,7 @@ function ClassroomModule() {
 
                   {selectedQuestion.explanation && (
                     <div className="explanation-card">
-                      <p>
-                        <strong>Justificativa:</strong> {selectedQuestion.explanation}
-                      </p>
+                      <FormattedExplanation explanation={selectedQuestion.explanation} />
                     </div>
                   )}
 
@@ -985,6 +1050,7 @@ function ClassroomModule() {
 }
 
 function QuizApp() {
+  const [selectedAreaFilter, setSelectedAreaFilter] = useState<AreaFilterId>("all");
   const [questions, setQuestions] = useState<Question[]>(() => createQuestionSet());
   const [session, setSession] = useState<SessionState>(() => createInitialSession(questions.length));
   const [drag, setDrag] = useState<DragState>(idleDrag);
@@ -992,9 +1058,12 @@ function QuizApp() {
   const [showTutorial, setShowTutorial] = useState(false);
   const [tutorialStep, setTutorialStep] = useState(0);
   const [tutorialTargetRect, setTutorialTargetRect] = useState<TargetRect | null>(null);
+  const [showFirstQuestionScrollHint, setShowFirstQuestionScrollHint] = useState(false);
+  const [showSecondQuestionScrollHint, setShowSecondQuestionScrollHint] = useState(false);
   const [questionExposureCounts, setQuestionExposureCounts] = useState<Record<string, number>>({});
   const stageRef = useRef<HTMLElement | null>(null);
   const activeScrollRef = useRef<HTMLDivElement | null>(null);
+  const areaFilterRef = useRef<HTMLDivElement | null>(null);
   const questionCardRef = useRef<HTMLElement | null>(null);
   const optionsListRef = useRef<HTMLElement | null>(null);
   const feedbackRef = useRef<HTMLElement | null>(null);
@@ -1010,6 +1079,7 @@ function QuizApp() {
   const sentQuestionEventKeysRef = useRef<Set<string>>(new Set());
 
   const questionCount = questions.length;
+  const sessionQuestionTotal = questionCount;
   const question = questions[session.currentIndex];
   const questionState = normalizeQuestionState(session.questionStates[session.currentIndex]);
   const questionLocked =
@@ -1032,6 +1102,10 @@ function QuizApp() {
 
     if (target === "question") {
       return questionCardRef.current;
+    }
+
+    if (target === "areaFilter") {
+      return areaFilterRef.current;
     }
 
     if (target === "confirm") {
@@ -1082,6 +1156,22 @@ function QuizApp() {
   function markTutorialSeen() {
     try {
       window.localStorage.setItem(TUTORIAL_STORAGE_KEY, "true");
+    } catch {
+      // localStorage can be unavailable in restricted browser modes.
+    }
+  }
+
+  function markFirstQuestionScrollHintSeen() {
+    try {
+      window.localStorage.setItem(FIRST_QUESTION_SCROLL_HINT_STORAGE_KEY, "true");
+    } catch {
+      // localStorage can be unavailable in restricted browser modes.
+    }
+  }
+
+  function markSecondQuestionScrollHintSeen() {
+    try {
+      window.localStorage.setItem(SECOND_QUESTION_SCROLL_HINT_STORAGE_KEY, "true");
     } catch {
       // localStorage can be unavailable in restricted browser modes.
     }
@@ -1305,12 +1395,65 @@ function QuizApp() {
     feedbackRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   }, [questionState.isConfirmed, questionState.isExpired]);
 
+  useEffect(() => {
+    if (
+      showTutorial ||
+      session.flowStep !== "question" ||
+      session.currentIndex !== 0 ||
+      !questionState.isConfirmed ||
+      questionCount < 2
+    ) {
+      setShowFirstQuestionScrollHint(false);
+      return;
+    }
+
+    try {
+      if (window.localStorage.getItem(FIRST_QUESTION_SCROLL_HINT_STORAGE_KEY) === "true") {
+        return;
+      }
+    } catch {
+      // If storage is blocked, show the hint once in this session.
+    }
+
+    markFirstQuestionScrollHintSeen();
+    setShowFirstQuestionScrollHint(true);
+  }, [showTutorial, session.flowStep, session.currentIndex, questionState.isConfirmed, questionCount]);
+
+  useEffect(() => {
+    if (
+      showTutorial ||
+      session.flowStep !== "question" ||
+      session.currentIndex !== 1 ||
+      questionCount < 2
+    ) {
+      setShowSecondQuestionScrollHint(false);
+      return;
+    }
+
+    try {
+      if (window.localStorage.getItem(SECOND_QUESTION_SCROLL_HINT_STORAGE_KEY) === "true") {
+        return;
+      }
+    } catch {
+      // If storage is blocked, show the hint once in this session.
+    }
+
+    markSecondQuestionScrollHintSeen();
+    setShowSecondQuestionScrollHint(true);
+
+    const timer = window.setTimeout(() => {
+      setShowSecondQuestionScrollHint(false);
+    }, 6200);
+
+    return () => window.clearTimeout(timer);
+  }, [showTutorial, session.flowStep, session.currentIndex, questionCount]);
+
   const summary = useMemo(() => {
     const answered = session.answers.filter((answer) => !answer.expired);
     const correct = session.answers.filter((answer) => answer.isCorrect);
     const expired = session.answers.filter((answer) => answer.expired);
     const totalScore = session.answers.reduce((total, answer) => total + answer.score, 0);
-    const percent = Math.round((totalScore / QUESTION_LIMIT) * 100);
+    const percent = sessionQuestionTotal > 0 ? Math.round((totalScore / sessionQuestionTotal) * 100) : 0;
 
     return {
       answered: answered.length,
@@ -1320,7 +1463,7 @@ function QuizApp() {
       percent,
       totalScore,
     };
-  }, [session.answers]);
+  }, [session.answers, sessionQuestionTotal]);
 
   function generateSessionPdf() {
     const exportedAt = new Date();
@@ -1336,7 +1479,7 @@ function QuizApp() {
         percent: summary.percent,
         totalScore: summary.totalScore,
       },
-      totalQuestions: QUESTION_LIMIT,
+      totalQuestions: sessionQuestionTotal,
     });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
@@ -1412,6 +1555,8 @@ function QuizApp() {
       return;
     }
 
+    setShowFirstQuestionScrollHint(false);
+    setShowSecondQuestionScrollHint(false);
     setSession((current) => ({
       ...current,
       currentIndex: cappedIndex,
@@ -1537,6 +1682,8 @@ function QuizApp() {
       return;
     }
 
+    setShowFirstQuestionScrollHint(false);
+    setShowSecondQuestionScrollHint(false);
     preventDefault();
     setDragState({
       isDragging: true,
@@ -1757,8 +1904,22 @@ function QuizApp() {
     setSession(createInitialSession(questionCount));
   }
 
+  function selectAreaFilter(filterId: AreaFilterId) {
+    if (filterId === selectedAreaFilter) {
+      return;
+    }
+
+    const nextQuestions = createQuestionSet(questionExposureCounts, filterId);
+    sentQuestionEventKeysRef.current.clear();
+    setSelectedAreaFilter(filterId);
+    setFeedbackAnimation(null);
+    setDragState(idleDrag);
+    setQuestions(nextQuestions);
+    setSession(createInitialSession(nextQuestions.length));
+  }
+
   function startNewQuestions() {
-    const nextQuestions = createQuestionSet(questionExposureCounts);
+    const nextQuestions = createQuestionSet(questionExposureCounts, selectedAreaFilter);
     sentQuestionEventKeysRef.current.clear();
     setFeedbackAnimation(null);
     setDragState(idleDrag);
@@ -1798,7 +1959,7 @@ function QuizApp() {
 
         <section className="score-card">
           <p>Pontuação total</p>
-          <strong>{summary.totalScore.toFixed(1).replace(".", ",")} / {QUESTION_LIMIT}</strong>
+          <strong>{summary.totalScore.toFixed(1).replace(".", ",")} / {sessionQuestionTotal}</strong>
           <span>{summary.answered} questões respondidas. Dicas usadas reduzem a questão para metade da pontuação.</span>
         </section>
 
@@ -1842,7 +2003,7 @@ function QuizApp() {
     const targetState = normalizeQuestionState(session.questionStates[index]);
     const targetAnswer = session.answers.find((answer) => answer.questionId === targetQuestion.id);
     const targetStatus = getAnswerStatus(targetQuestion, targetState);
-    const targetProgress = Math.min(index + 1, QUESTION_LIMIT);
+    const targetProgress = Math.min(index + 1, sessionQuestionTotal);
     const isActive = position === "active";
     const targetLocked =
       targetState.isConfirmed ||
@@ -1917,10 +2078,28 @@ function QuizApp() {
         </header>
 
         <div className="question-page-scroll" ref={isActive ? activeScrollRef : undefined}>
+          <div className="area-filter-control" aria-label="Filtrar por grande área" ref={isActive ? areaFilterRef : undefined}>
+            <span className="area-filter-icon" aria-hidden="true">
+              <Filter size={17} />
+            </span>
+            {areaFilters.map((filter) => (
+              <button
+                aria-pressed={selectedAreaFilter === filter.id}
+                className={selectedAreaFilter === filter.id ? "active" : ""}
+                disabled={!isActive || selectedAreaFilter === filter.id}
+                key={filter.id}
+                onClick={() => selectAreaFilter(filter.id)}
+                type="button"
+              >
+                {filter.label}
+              </button>
+            ))}
+          </div>
+
           <div className="meta-row">
             <span className="id-pill">{targetQuestion.id}</span>
             <span className="area-pill">{targetQuestion.area}</span>
-            <span className="progress-pill">{targetProgress}/{QUESTION_LIMIT} hoje</span>
+            <span className="progress-pill">{targetProgress}/{sessionQuestionTotal} hoje</span>
             {targetState.usedHint && <span className="hint-penalty-pill">Dica: 50%</span>}
           </div>
 
@@ -2008,9 +2187,7 @@ function QuizApp() {
 
             {(targetState.isConfirmed || targetState.isExpired) && targetQuestion.explanation && (
               <div className="explanation-card">
-                <p>
-                  <strong>Justificativa:</strong> {targetQuestion.explanation}
-                </p>
+                <FormattedExplanation explanation={targetQuestion.explanation} />
               </div>
             )}
           </section>
@@ -2126,6 +2303,26 @@ function QuizApp() {
           </button>
         )}
 
+        {showFirstQuestionScrollHint && (
+          <div className="first-question-scroll-hint" aria-hidden="true">
+            <div className="scroll-hint-phone scroll-hint-up">
+              <span />
+            </div>
+            <strong>Arraste para cima</strong>
+            <p>Próxima questão</p>
+          </div>
+        )}
+
+        {showSecondQuestionScrollHint && (
+          <div className="first-question-scroll-hint second-question-scroll-hint" aria-hidden="true">
+            <div className="scroll-hint-phone scroll-hint-down">
+              <span />
+            </div>
+            <strong>Arraste para baixo</strong>
+            <p>QuestÃ£o anterior</p>
+          </div>
+        )}
+
         {showTutorial && (
           <TutorialOverlay
             onClose={() => closeTutorial(true)}
@@ -2149,7 +2346,12 @@ export default function App() {
   const isQuestionEditorRoute = normalizedPath.endsWith("/editar-questoes");
   const isQuestionValidatorRoute = normalizedPath.endsWith("/validar-questoes");
   const isClassroomRoute = normalizedPath.endsWith("/sala-de-aula") || normalizedPath.endsWith("/estudar");
+  const isDesktopRoute = normalizedPath.endsWith("/desktop") || normalizedPath.includes("/desktop/");
   const isModule2Route = normalizedPath.endsWith("/modulo-2") || normalizedPath.includes("/modulo-2/");
+
+  if (isDesktopRoute) {
+    return <DesktopApp />;
+  }
 
   if (isModule2Route) {
     return <Module2App />;

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { AlertCircle, ArrowLeft, BarChart3, CalendarDays, Download, Filter, RefreshCw, Search } from "lucide-react";
-import { questionBank, type Area, type Option, type Question, type Tema } from "./data/questions";
+import { questionBank, type Area, type Option, type Question, type Tema, type TemaGeral } from "./data/questions";
 import {
   fetchAggregatedQuestionDetailStats,
   fetchAggregatedQuestionStats,
@@ -30,6 +30,7 @@ type QuestionSummary = Summary & {
   questionId: string;
   area: Area;
   tema: Tema;
+  temaGeral: TemaGeral;
   correctOptionId: Option["id"];
   usedHintQuestions: number;
   selectedOptions: Record<Option["id"], number>;
@@ -154,6 +155,7 @@ function summarizeQuestionRows(rows: AggregatedQuestionDetailStats[]): QuestionS
           questionId,
           area: firstRow.area,
           tema: firstRow.tema,
+          temaGeral: firstRow.temaGeral,
           correctOptionId: firstRow.correctOptionId,
           usedHintQuestions: 0,
           selectedOptions: emptySelectedOptions,
@@ -177,6 +179,7 @@ function getQuestionSearchText(question: Question | undefined, summary: Question
   return [
     summary.questionId,
     summary.area,
+    summary.temaGeral,
     summary.tema,
     question?.statement,
     question?.explanationTitle,
@@ -249,7 +252,8 @@ function QuestionStatsTable({
             <thead>
               <tr>
                 <th>Questao</th>
-                <th>Tema</th>
+                <th>Tema geral</th>
+                <th>Tema especifico</th>
                 <th>Area</th>
                 <th>Respostas</th>
                 <th>Acerto</th>
@@ -265,6 +269,7 @@ function QuestionStatsTable({
                   onClick={() => onSelectQuestion(row.questionId)}
                 >
                   <td>{row.questionId}</td>
+                  <td>{row.temaGeral}</td>
                   <td>{row.tema}</td>
                   <td>{row.area}</td>
                   <td>{row.totalQuestions}</td>
@@ -296,6 +301,7 @@ function QuestionDetail({ summary }: { summary: QuestionSummary }) {
       </div>
 
       <div className="question-detail-meta">
+        <span>{summary.temaGeral}</span>
         <span>{summary.tema}</span>
         <span>{summary.area}</span>
         <span>{summary.totalQuestions} respostas</span>
@@ -350,7 +356,7 @@ export default function StatisticsDashboard() {
     questionStatsConfigured() ? "loading" : "not-configured",
   );
   const [selectedDay, setSelectedDay] = useState("all");
-  const [selectedTema, setSelectedTema] = useState("all");
+  const [selectedTemaGeral, setSelectedTemaGeral] = useState("all");
   const [selectedArea, setSelectedArea] = useState("all");
   const [questionSearch, setQuestionSearch] = useState("");
   const [selectedQuestionId, setSelectedQuestionId] = useState<string | null>(null);
@@ -385,36 +391,36 @@ export default function StatisticsDashboard() {
   }, []);
 
   const days = useMemo(() => Array.from(new Set(rows.map((row) => row.localDay))).sort().reverse(), [rows]);
-  const temas = useMemo(() => Array.from(new Set(rows.map((row) => row.tema))).sort(), [rows]);
+  const temasGerais = useMemo(() => Array.from(new Set(rows.map((row) => row.temaGeral))).sort(), [rows]);
   const areas = useMemo(() => Array.from(new Set(rows.map((row) => row.area))).sort(), [rows]);
 
   const filteredRows = useMemo(
     () =>
       rows.filter((row) => {
         const matchesDay = selectedDay === "all" || row.localDay === selectedDay;
-        const matchesTema = selectedTema === "all" || row.tema === selectedTema;
+        const matchesTemaGeral = selectedTemaGeral === "all" || row.temaGeral === selectedTemaGeral;
         const matchesArea = selectedArea === "all" || row.area === selectedArea;
 
-        return matchesDay && matchesTema && matchesArea;
+        return matchesDay && matchesTemaGeral && matchesArea;
       }),
-    [rows, selectedArea, selectedDay, selectedTema],
+    [rows, selectedArea, selectedDay, selectedTemaGeral],
   );
 
   const filteredQuestionRows = useMemo(
     () =>
       questionRows.filter((row) => {
         const matchesDay = selectedDay === "all" || row.localDay === selectedDay;
-        const matchesTema = selectedTema === "all" || row.tema === selectedTema;
+        const matchesTemaGeral = selectedTemaGeral === "all" || row.temaGeral === selectedTemaGeral;
         const matchesArea = selectedArea === "all" || row.area === selectedArea;
 
-        return matchesDay && matchesTema && matchesArea;
+        return matchesDay && matchesTemaGeral && matchesArea;
       }),
-    [questionRows, selectedArea, selectedDay, selectedTema],
+    [questionRows, selectedArea, selectedDay, selectedTemaGeral],
   );
 
   const summary = useMemo(() => summarize(filteredRows), [filteredRows]);
   const byDay = useMemo(() => groupBy(filteredRows, (row) => formatDate(row.localDay)), [filteredRows]);
-  const byTema = useMemo(() => groupBy(filteredRows, (row) => row.tema), [filteredRows]);
+  const byTema = useMemo(() => groupBy(filteredRows, (row) => row.temaGeral), [filteredRows]);
   const byArea = useMemo(() => groupBy(filteredRows, (row) => row.area), [filteredRows]);
   const questionSummaries = useMemo(() => summarizeQuestionRows(filteredQuestionRows), [filteredQuestionRows]);
   const searchedQuestionSummaries = useMemo(() => {
@@ -448,7 +454,7 @@ export default function StatisticsDashboard() {
     const timestamp = exportedAt.toISOString().replace(/[:.]/g, "-");
     const filters = [
       `Dia: ${selectedDay === "all" ? "Todos" : formatDate(selectedDay)}`,
-      `Tema: ${selectedTema === "all" ? "Todos" : selectedTema}`,
+      `Tema geral: ${selectedTemaGeral === "all" ? "Todos" : selectedTemaGeral}`,
       `Area: ${selectedArea === "all" ? "Todas" : selectedArea}`,
       `Busca: ${questionSearch.trim() || "Sem busca"}`,
     ];
@@ -470,7 +476,7 @@ export default function StatisticsDashboard() {
     const timestamp = exportedAt.toISOString().replace(/[:.]/g, "-");
     const filters = [
       `Dia: ${selectedDay === "all" ? "Todos" : formatDate(selectedDay)}`,
-      `Tema: ${selectedTema === "all" ? "Todos" : selectedTema}`,
+      `Tema geral: ${selectedTemaGeral === "all" ? "Todos" : selectedTemaGeral}`,
       `Area: ${selectedArea === "all" ? "Todas" : selectedArea}`,
       `Busca: ${questionSearch.trim() || "Sem busca"}`,
     ];
@@ -569,12 +575,12 @@ export default function StatisticsDashboard() {
                 </select>
               </label>
               <label>
-                <span>Tema</span>
-                <select value={selectedTema} onChange={(event) => setSelectedTema(event.target.value as Tema | "all")}>
+                <span>Tema geral</span>
+                <select value={selectedTemaGeral} onChange={(event) => setSelectedTemaGeral(event.target.value as TemaGeral | "all")}>
                   <option value="all">Todos os temas</option>
-                  {temas.map((tema) => (
-                    <option key={tema} value={tema}>
-                      {tema}
+                  {temasGerais.map((temaGeral) => (
+                    <option key={temaGeral} value={temaGeral}>
+                      {temaGeral}
                     </option>
                   ))}
                 </select>
